@@ -11,13 +11,20 @@ import {
   Dimensions,
 } from "react-native";
 import { WebView } from "react-native-webview";
+import QuizModal from "./QuizModal";
+import { hasQuiz, getQuizByModel } from "../data/quizData";
 
 const { width } = Dimensions.get("window");
 
-const ModelViewer = ({ modelData, navigation }) => {
-  const { embedUrl, title, description } = modelData;
+const ModelViewer = ({ modelData, navigation, subject }) => {
+  const { embedUrl, title, description, id } = modelData;
   const [isLoading, setIsLoading] = useState(true);
   const [showDescription, setShowDescription] = useState(false);
+  const [quizVisible, setQuizVisible] = useState(false);
+  
+  // Check if this model has a quiz
+  const modelHasQuiz = hasQuiz(subject, id);
+  const quizData = modelHasQuiz ? getQuizByModel(subject, id) : null;
 
   // Animation values
   const fadeAnim = useRef(new Animated.Value(0)).current;
@@ -245,6 +252,30 @@ const ModelViewer = ({ modelData, navigation }) => {
           </TouchableOpacity>
         </Animated.View>
 
+        {/* Take Quiz Button */}
+        {modelHasQuiz && (
+          <Animated.View
+            style={[
+              styles.quizButtonContainer,
+              {
+                opacity: fadeAnim,
+                transform: [{ translateY: slideAnim }, { scale: scaleAnim }],
+              },
+            ]}
+          >
+            <TouchableOpacity
+              style={styles.quizButton}
+              onPress={() => setQuizVisible(true)}
+              activeOpacity={0.85}
+            >
+              <View style={styles.quizButtonGlow} />
+              <Text style={styles.quizButtonIcon}>📝</Text>
+              <Text style={styles.quizButtonText}>Take Quiz</Text>
+              <Text style={styles.quizButtonSubtext}>Test your knowledge</Text>
+            </TouchableOpacity>
+          </Animated.View>
+        )}
+
         {/* Description */}
         {showDescription && (
           <Animated.View
@@ -288,6 +319,16 @@ const ModelViewer = ({ modelData, navigation }) => {
           </Animated.View>
         )}
       </ScrollView>
+
+      {/* Quiz Modal */}
+      {modelHasQuiz && (
+        <QuizModal
+          visible={quizVisible}
+          onClose={() => setQuizVisible(false)}
+          quizData={quizData}
+          modelTitle={title}
+        />
+      )}
     </SafeAreaView>
   );
 };
@@ -531,6 +572,47 @@ const styles = StyleSheet.create({
   },
   aiButtonSubtext: {
     color: "rgba(0,245,212,0.7)",
+    fontSize: 14,
+    fontWeight: "400",
+  },
+  quizButtonContainer: {
+    marginBottom: 25,
+  },
+  quizButton: {
+    backgroundColor: "rgba(255, 165, 0, 0.1)",
+    borderRadius: 20,
+    padding: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1.5,
+    borderColor: "#FFA500",
+    position: "relative",
+    shadowColor: "#FFA500",
+    shadowOpacity: 0.4,
+    shadowRadius: 20,
+  },
+  quizButtonGlow: {
+    position: "absolute",
+    top: -2,
+    left: -2,
+    right: -2,
+    bottom: -2,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: "rgba(255, 165, 0, 0.4)",
+  },
+  quizButtonIcon: {
+    fontSize: 30,
+    marginBottom: 8,
+  },
+  quizButtonText: {
+    color: "#FFA500",
+    fontSize: 20,
+    fontWeight: "700",
+    marginBottom: 4,
+  },
+  quizButtonSubtext: {
+    color: "rgba(255, 165, 0, 0.7)",
     fontSize: 14,
     fontWeight: "400",
   },

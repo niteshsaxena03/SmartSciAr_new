@@ -90,7 +90,7 @@ export default function BiologyModelScreen({ route, navigation }) {
         {isARMode ? (
           <ARModelViewer modelData={modelData} navigation={navigation} />
         ) : (
-          <ModelViewer modelData={modelData} navigation={navigation} />
+          <ModelViewer modelData={modelData} navigation={navigation} subject="biology" />
         )}
       </SafeAreaView>
     </LinearGradient>

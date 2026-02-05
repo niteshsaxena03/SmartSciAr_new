@@ -95,7 +95,7 @@ export default function ChemistryModelScreen({ route, navigation }) {
         {isARMode ? (
           <ARModelViewer modelData={modelData} navigation={navigation} />
         ) : (
-          <ModelViewer modelData={modelData} navigation={navigation} />
+          <ModelViewer modelData={modelData} navigation={navigation} subject="chemistry" />
         )}
       
       </SafeAreaView>

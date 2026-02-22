@@ -1,4 +1,20 @@
 export const chemistryModels = {
+  waterBallStick: {
+    id: "waterBallStick",
+    title: "Water Ball-and-Stick Model",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/water-molecule-ball-and-stick-model-b3b508a8fde242ddb4d5baa8988ee090",
+    embedUrl:
+      "https://sketchfab.com/models/b3b508a8fde242ddb4d5baa8988ee090/embed",
+    description: [
+      "• A detailed ball-and-stick representation of water showing the precise molecular geometry with accurate bond lengths and the characteristic bent shape.",
+      "• Clearly illustrates the 104.5° H-O-H bond angle that results from the tetrahedral electron geometry around oxygen with two lone pairs.",
+      "• Shows the relative sizes of hydrogen and oxygen atoms, helping students visualize atomic radii differences and understand molecular polarity.",
+      "• Demonstrates how lone pairs on oxygen affect molecular shape and create the dipole moment that makes water an excellent solvent.",
+      "• Perfect educational model for teaching molecular geometry, VSEPR theory, and the relationship between electron arrangement and molecular properties.",
+    ],
+  },
+  
   atom: {
     id: "atom",
     title: "Atomic Structure",
@@ -14,6 +30,37 @@ export const chemistryModels = {
       "• Understanding atomic structure is crucial for explaining chemical reactions, bonding patterns, and the behavior of elements in different compounds.",
     ],
   },
+  atomicModel: {
+    id: "atomicModel",
+    title: "Atomic Model",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/chemistry-atomic-model-132410dcc28744bbb111f81b0bf0e4da",
+    embedUrl:
+      "https://sketchfab.com/models/132410dcc28744bbb111f81b0bf0e4da/embed",
+    description: [
+      "• A detailed representation showing the evolution of atomic theory from Dalton's solid sphere to the modern quantum mechanical model with electron orbitals.",
+      "• Demonstrates how our understanding of atomic structure has progressed through key discoveries including the nucleus, electron shells, and quantum energy levels.",
+      "• Shows the relationship between protons, neutrons, and electrons, and how their arrangement determines an element's chemical and physical properties.",
+      "• Illustrates concepts like atomic number, mass number, isotopes, and how electron configuration affects an atom's reactivity and bonding behavior.",
+      "• Essential for understanding periodic trends, chemical bonding theories, and the foundation of modern chemistry and physics.",
+    ],
+  },
+  cyclohexane: {
+    id: "cyclohexane",
+    title: "Cyclohexane Chair",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/cyclo-hexane-chair-conformation-ab3149dbf78e4fe1879d69179776b33a",
+    embedUrl:
+      "https://sketchfab.com/models/ab3149dbf78e4fe1879d69179776b33a/embed",
+    description: [
+      "• A six-membered saturated hydrocarbon ring (C₆H₁₂) that adopts a chair conformation to minimize steric strain and achieve optimal bond angles.",
+      "• The chair conformation shows axial and equatorial positions for substituents, with equatorial positions being generally more stable due to reduced steric interactions.",
+      "• Demonstrates conformational analysis and ring strain concepts, showing how cyclic molecules adopt specific shapes to minimize energy and maximize stability.",
+      "• Important for understanding steroid chemistry, sugar chemistry, and many natural products that contain six-membered ring systems.",
+      "• Fundamental to organic chemistry education, illustrating concepts of molecular flexibility, conformational equilibria, and three-dimensional molecular structure.",
+    ],
+  },
+  
 
   benzene: {
     id: "benzene",
@@ -47,21 +94,7 @@ export const chemistryModels = {
     ],
   },
 
-  atomicModel: {
-    id: "atomicModel",
-    title: "Atomic Model",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/chemistry-atomic-model-132410dcc28744bbb111f81b0bf0e4da",
-    embedUrl:
-      "https://sketchfab.com/models/132410dcc28744bbb111f81b0bf0e4da/embed",
-    description: [
-      "• A detailed representation showing the evolution of atomic theory from Dalton's solid sphere to the modern quantum mechanical model with electron orbitals.",
-      "• Demonstrates how our understanding of atomic structure has progressed through key discoveries including the nucleus, electron shells, and quantum energy levels.",
-      "• Shows the relationship between protons, neutrons, and electrons, and how their arrangement determines an element's chemical and physical properties.",
-      "• Illustrates concepts like atomic number, mass number, isotopes, and how electron configuration affects an atom's reactivity and bonding behavior.",
-      "• Essential for understanding periodic trends, chemical bonding theories, and the foundation of modern chemistry and physics.",
-    ],
-  },
+  
 
   molecule: {
     id: "molecule",
@@ -207,21 +240,7 @@ export const chemistryModels = {
     ],
   },
 
-  cyclohexane: {
-    id: "cyclohexane",
-    title: "Cyclohexane Chair",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/cyclo-hexane-chair-conformation-ab3149dbf78e4fe1879d69179776b33a",
-    embedUrl:
-      "https://sketchfab.com/models/ab3149dbf78e4fe1879d69179776b33a/embed",
-    description: [
-      "• A six-membered saturated hydrocarbon ring (C₆H₁₂) that adopts a chair conformation to minimize steric strain and achieve optimal bond angles.",
-      "• The chair conformation shows axial and equatorial positions for substituents, with equatorial positions being generally more stable due to reduced steric interactions.",
-      "• Demonstrates conformational analysis and ring strain concepts, showing how cyclic molecules adopt specific shapes to minimize energy and maximize stability.",
-      "• Important for understanding steroid chemistry, sugar chemistry, and many natural products that contain six-membered ring systems.",
-      "• Fundamental to organic chemistry education, illustrating concepts of molecular flexibility, conformational equilibria, and three-dimensional molecular structure.",
-    ],
-  },
+  
 
   dopamine: {
     id: "dopamine",
@@ -255,21 +274,7 @@ export const chemistryModels = {
     ],
   },
 
-  waterBallStick: {
-    id: "waterBallStick",
-    title: "Water Ball-and-Stick Model",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/water-molecule-ball-and-stick-model-b3b508a8fde242ddb4d5baa8988ee090",
-    embedUrl:
-      "https://sketchfab.com/models/b3b508a8fde242ddb4d5baa8988ee090/embed",
-    description: [
-      "• A detailed ball-and-stick representation of water showing the precise molecular geometry with accurate bond lengths and the characteristic bent shape.",
-      "• Clearly illustrates the 104.5° H-O-H bond angle that results from the tetrahedral electron geometry around oxygen with two lone pairs.",
-      "• Shows the relative sizes of hydrogen and oxygen atoms, helping students visualize atomic radii differences and understand molecular polarity.",
-      "• Demonstrates how lone pairs on oxygen affect molecular shape and create the dipole moment that makes water an excellent solvent.",
-      "• Perfect educational model for teaching molecular geometry, VSEPR theory, and the relationship between electron arrangement and molecular properties.",
-    ],
-  },
+  
 
   liquidWater: {
     id: "liquidWater",

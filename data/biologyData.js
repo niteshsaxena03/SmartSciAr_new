@@ -1,4 +1,50 @@
 export const biologyModels = {
+  neuron: {
+    id: "neuron",
+    title: "Neuron Structure",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/neuron-d40557a1e4154267b78117433bc51296",
+    embedUrl:
+      "https://sketchfab.com/models/d40557a1e4154267b78117433bc51296/embed",
+    description: [
+      "• Highly specialized nerve cell featuring dendrites for receiving signals, cell body for processing, and axon for transmitting electrical impulses throughout the nervous system.",
+      "• Shows synaptic connections where neurons communicate through neurotransmitters, enabling complex brain functions like memory, learning, and consciousness.",
+      "• Demonstrates the unique structure-function relationship where long axons can extend over a meter, allowing rapid communication between distant body parts.",
+      "• Illustrates how neurons form networks that process sensory information, control motor functions, and coordinate all bodily activities through the nervous system.",
+      "• Foundation for understanding neurological diseases, brain function, artificial intelligence concepts, and how the nervous system controls behavior and cognition.",
+    ],
+  },
+  animalCell: {
+    id: "animalCell",
+    title: "Animal Cell Structure",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/biology-animal-cell-4d60cacd5fa543058cfe65064e2d4d53",
+    embedUrl:
+      "https://sketchfab.com/models/4d60cacd5fa543058cfe65064e2d4d53/embed",
+    description: [
+      "• Specialized cellular structure lacking cell walls and chloroplasts, featuring flexible cell membrane, centrioles, and lysosomes unique to animal cells.",
+      "• Contains mitochondria as powerhouses for cellular respiration, converting glucose and oxygen into ATP energy for all cellular activities and metabolic processes.",
+      "• Shows the nucleus as the control center containing DNA, directing protein synthesis and cellular reproduction through complex genetic regulatory mechanisms.",
+      "• Demonstrates cellular specialization where different cell types develop specific structures and functions to form tissues, organs, and organ systems.",
+      "• Foundation for understanding animal physiology, development, and how multicellular organisms coordinate billions of cells to maintain life and respond to environments.",
+    ],
+  },
+  humanBrain: {
+    id: "humanBrain",
+    title: "Human Brain Structure",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/brain-areas-d64608a3978b47d8a39c5a15795ca8c4",
+    embedUrl:
+      "https://sketchfab.com/models/d64608a3978b47d8a39c5a15795ca8c4/embed",
+    description: [
+      "• The command center of the nervous system featuring cerebrum, cerebellum, and brainstem regions that control all conscious and unconscious bodily functions.",
+      "• Shows specialized brain areas including frontal lobe for decision-making, temporal lobe for memory, and occipital lobe for visual processing and interpretation.",
+      "• Demonstrates the complex neural networks that enable higher cognitive functions like language, reasoning, creativity, and emotional regulation unique to humans.",
+      "• Illustrates how different brain regions communicate through neural pathways, creating the integrated consciousness and personality that defines human experience.",
+      "• Essential for understanding neurological disorders, brain injuries, mental health, learning processes, and the biological basis of human behavior and intelligence.",
+    ],
+  },
+  
   cellModel: {
     id: "cellModel",
     title: "Cell Model - Basic Structure",
@@ -26,7 +72,7 @@ export const biologyModels = {
       "https://sketchfab.com/3d-models/biology-plant-cell-0d87fbe2581b4cabae809bd6aaa7d56b",
     embedUrl:
       "https://sketchfab.com/models/0d87fbe2581b4cabae809bd6aaa7d56b/embed",
-    description: [
+    description: [  
       "• Unique cellular structure featuring cell wall, chloroplasts, large central vacuole, and other specialized organelles that distinguish plants from animal cells.",
       "• Shows chloroplasts containing chlorophyll for photosynthesis, the process that converts sunlight, carbon dioxide, and water into glucose and oxygen for energy.",
       "• The rigid cell wall provides structural support and protection, while the large central vacuole maintains turgor pressure and stores water and nutrients.",
@@ -35,21 +81,43 @@ export const biologyModels = {
     ],
   },
 
-  animalCell: {
-    id: "animalCell",
-    title: "Animal Cell Structure",
+  heartLungs: {
+    id: "heartLungs",
+    title: "Heart and Lungs",
     sketchfabUrl:
-      "https://sketchfab.com/3d-models/biology-animal-cell-4d60cacd5fa543058cfe65064e2d4d53",
+      "https://sketchfab.com/3d-models/adult-heart-and-lungs-be4465abad5b45529d586b7b07c1afc5",
     embedUrl:
-      "https://sketchfab.com/models/4d60cacd5fa543058cfe65064e2d4d53/embed",
+      "https://sketchfab.com/models/be4465abad5b45529d586b7b07c1afc5/embed",
     description: [
-      "• Specialized cellular structure lacking cell walls and chloroplasts, featuring flexible cell membrane, centrioles, and lysosomes unique to animal cells.",
-      "• Contains mitochondria as powerhouses for cellular respiration, converting glucose and oxygen into ATP energy for all cellular activities and metabolic processes.",
-      "• Shows the nucleus as the control center containing DNA, directing protein synthesis and cellular reproduction through complex genetic regulatory mechanisms.",
-      "• Demonstrates cellular specialization where different cell types develop specific structures and functions to form tissues, organs, and organ systems.",
-      "• Foundation for understanding animal physiology, development, and how multicellular organisms coordinate billions of cells to maintain life and respond to environments.",
+      "• Integrated cardiopulmonary system showing the close relationship between heart and lungs in delivering oxygen to tissues and removing carbon dioxide.",
+      "• Demonstrates pulmonary circulation where deoxygenated blood travels from heart to lungs for oxygenation before returning to heart for systemic distribution.",
+      "• Shows alveolar structure where gas exchange occurs, with thin membranes allowing efficient oxygen and carbon dioxide transfer between air and blood.",
+      "• Illustrates how breathing mechanics and heart pumping are coordinated to maintain optimal oxygen delivery and carbon dioxide removal throughout the body.",
+      "• Essential for understanding respiratory diseases, cardiovascular fitness, altitude adaptation, and how exercise improves cardiopulmonary health and endurance.",
     ],
   },
+
+  digestiveSystem: {
+    id: "digestiveSystem",
+    title: "Digestive System",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/digestive-system-9d2496ea02214506840006a1a92b321a",
+    embedUrl:
+      "https://sketchfab.com/models/9d2496ea02214506840006a1a92b321a/embed",
+    description: [
+      "• Complex organ system including mouth, esophagus, stomach, intestines, liver, and pancreas that breaks down food into nutrients for cellular energy and growth.",
+      "• Shows mechanical and chemical digestion processes, from chewing and stomach acid to enzyme action that converts complex foods into absorbable molecules.",
+      "• Demonstrates nutrient absorption in the small intestine through specialized villi that maximize surface area for efficient uptake into the bloodstream.",
+      "• Illustrates the role of beneficial gut bacteria in digestion, immune function, and vitamin synthesis, highlighting the importance of microbiome health.",
+      "• Essential for understanding nutrition, digestive disorders, food allergies, and how dietary choices affect overall health and disease prevention.",
+    ],
+  },
+
+  
+  
+
+
+  
 
   humanCell: {
     id: "humanCell",
@@ -83,21 +151,7 @@ export const biologyModels = {
     ],
   },
 
-  neuron: {
-    id: "neuron",
-    title: "Neuron Structure",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/neuron-d40557a1e4154267b78117433bc51296",
-    embedUrl:
-      "https://sketchfab.com/models/d40557a1e4154267b78117433bc51296/embed",
-    description: [
-      "• Highly specialized nerve cell featuring dendrites for receiving signals, cell body for processing, and axon for transmitting electrical impulses throughout the nervous system.",
-      "• Shows synaptic connections where neurons communicate through neurotransmitters, enabling complex brain functions like memory, learning, and consciousness.",
-      "• Demonstrates the unique structure-function relationship where long axons can extend over a meter, allowing rapid communication between distant body parts.",
-      "• Illustrates how neurons form networks that process sensory information, control motor functions, and coordinate all bodily activities through the nervous system.",
-      "• Foundation for understanding neurological diseases, brain function, artificial intelligence concepts, and how the nervous system controls behavior and cognition.",
-    ],
-  },
+  
 
   dnaRna: {
     id: "dnaRna",
@@ -131,21 +185,7 @@ export const biologyModels = {
     ],
   },
 
-  humanBrain: {
-    id: "humanBrain",
-    title: "Human Brain Structure",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/brain-areas-d64608a3978b47d8a39c5a15795ca8c4",
-    embedUrl:
-      "https://sketchfab.com/models/d64608a3978b47d8a39c5a15795ca8c4/embed",
-    description: [
-      "• The command center of the nervous system featuring cerebrum, cerebellum, and brainstem regions that control all conscious and unconscious bodily functions.",
-      "• Shows specialized brain areas including frontal lobe for decision-making, temporal lobe for memory, and occipital lobe for visual processing and interpretation.",
-      "• Demonstrates the complex neural networks that enable higher cognitive functions like language, reasoning, creativity, and emotional regulation unique to humans.",
-      "• Illustrates how different brain regions communicate through neural pathways, creating the integrated consciousness and personality that defines human experience.",
-      "• Essential for understanding neurological disorders, brain injuries, mental health, learning processes, and the biological basis of human behavior and intelligence.",
-    ],
-  },
+  
 
   humanEye: {
     id: "humanEye",
@@ -195,21 +235,7 @@ export const biologyModels = {
     ],
   },
 
-  digestiveSystem: {
-    id: "digestiveSystem",
-    title: "Digestive System",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/digestive-system-9d2496ea02214506840006a1a92b321a",
-    embedUrl:
-      "https://sketchfab.com/models/9d2496ea02214506840006a1a92b321a/embed",
-    description: [
-      "• Complex organ system including mouth, esophagus, stomach, intestines, liver, and pancreas that breaks down food into nutrients for cellular energy and growth.",
-      "• Shows mechanical and chemical digestion processes, from chewing and stomach acid to enzyme action that converts complex foods into absorbable molecules.",
-      "• Demonstrates nutrient absorption in the small intestine through specialized villi that maximize surface area for efficient uptake into the bloodstream.",
-      "• Illustrates the role of beneficial gut bacteria in digestion, immune function, and vitamin synthesis, highlighting the importance of microbiome health.",
-      "• Essential for understanding nutrition, digestive disorders, food allergies, and how dietary choices affect overall health and disease prevention.",
-    ],
-  },
+  
 
   excretorySystem: {
     id: "excretorySystem",
@@ -227,21 +253,7 @@ export const biologyModels = {
     ],
   },
 
-  heartLungs: {
-    id: "heartLungs",
-    title: "Heart and Lungs",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/adult-heart-and-lungs-be4465abad5b45529d586b7b07c1afc5",
-    embedUrl:
-      "https://sketchfab.com/models/be4465abad5b45529d586b7b07c1afc5/embed",
-    description: [
-      "• Integrated cardiopulmonary system showing the close relationship between heart and lungs in delivering oxygen to tissues and removing carbon dioxide.",
-      "• Demonstrates pulmonary circulation where deoxygenated blood travels from heart to lungs for oxygenation before returning to heart for systemic distribution.",
-      "• Shows alveolar structure where gas exchange occurs, with thin membranes allowing efficient oxygen and carbon dioxide transfer between air and blood.",
-      "• Illustrates how breathing mechanics and heart pumping are coordinated to maintain optimal oxygen delivery and carbon dioxide removal throughout the body.",
-      "• Essential for understanding respiratory diseases, cardiovascular fitness, altitude adaptation, and how exercise improves cardiopulmonary health and endurance.",
-    ],
-  },
+  
 
   coronavirus: {
     id: "coronavirus",

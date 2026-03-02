@@ -6,42 +6,31 @@ import {
   SafeAreaView,
   TouchableOpacity,
   ScrollView,
+  Dimensions,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import { useAuth } from "../context/AuthContext";
 
+const { width } = Dimensions.get("window");
+
 export default function HomeScreen({ navigation }) {
   const { user, userProfile } = useAuth();
-  const handlePhysicsPress = () => {
-    navigation.navigate("Physics");
-  };
 
-  const handleChemistryPress = () => {
-    navigation.navigate("Chemistry");
-  };
-
-  const handleBiologyPress = () => {
-    navigation.navigate("Biology");
-  };
-
-  const handleBackToWelcome = () => {
-    navigation.navigate("Welcome");
-  };
-
-  const handleProfilePress = () => {
-    navigation.navigate("Profile");
-  };
+  const handlePhysicsPress = () => navigation.navigate("Physics");
+  const handleChemistryPress = () => navigation.navigate("Chemistry");
+  const handleBiologyPress = () => navigation.navigate("Biology");
+  const handleBackToWelcome = () => navigation.navigate("Welcome");
+  const handleProfilePress = () => navigation.navigate("Profile");
 
   return (
     <LinearGradient
-      colors={["#0D1322", "#0A1B36", "#042D45"]}
+      colors={["#FFF8E7", "#FFF0D4", "#FFE8C8"]}
       style={styles.container}
     >
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar style="light" />
+        <StatusBar style="dark" />
 
-        {/* Back Button */}
         <TouchableOpacity
           style={styles.backButton}
           onPress={handleBackToWelcome}
@@ -50,7 +39,6 @@ export default function HomeScreen({ navigation }) {
           <Text style={styles.backButtonText}>←</Text>
         </TouchableOpacity>
 
-        {/* Profile Button - Only show if user is logged in */}
         {user && (
           <TouchableOpacity
             style={styles.profileButton}
@@ -58,7 +46,7 @@ export default function HomeScreen({ navigation }) {
             activeOpacity={0.7}
           >
             <LinearGradient
-              colors={["#4895EF", "#4CC9F0"]}
+              colors={["#FF9A56", "#FF6B6B"]}
               style={styles.profileButtonGradient}
             >
               <Text style={styles.profileButtonText}>
@@ -76,9 +64,10 @@ export default function HomeScreen({ navigation }) {
           showsVerticalScrollIndicator={false}
         >
           <View style={styles.headerSection}>
-            <Text style={styles.title}>Explore Subjects</Text>
+            <Text style={styles.greeting}>Hey there! 👋</Text>
+            <Text style={styles.title}>What do you want{"\n"}to learn today?</Text>
             <Text style={styles.subtitle}>
-              Ready for a new kind of learning?
+              Pick a subject and start exploring!
             </Text>
           </View>
 
@@ -86,27 +75,26 @@ export default function HomeScreen({ navigation }) {
             {/* Physics Card */}
             <TouchableOpacity
               style={styles.subjectCard}
-              activeOpacity={0.8}
+              activeOpacity={0.85}
               onPress={handlePhysicsPress}
             >
               <LinearGradient
-                colors={["rgba(68, 123, 222, 0.15)", "rgba(67, 133, 255, 1)"]}
+                colors={["#667EEA", "#764BA2"]}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
                 style={styles.cardInner}
               >
-                <View style={styles.cardHeader}>
-                  <View style={[styles.cardIcon, styles.physicsIconBg]}>
-                    <Text style={styles.iconText}>⚛️</Text>
-                  </View>
-                  <Text style={styles.cardTitle}>Physics</Text>
+                <View style={styles.cardEmojiWrap}>
+                  <Text style={styles.cardEmoji}>🚀</Text>
                 </View>
-                <Text style={styles.cardDescription}>
-                  Explore atoms, forces, and quantum mechanics with interactive
-                  AR models.
-                </Text>
-                <View style={[styles.cardButton, styles.physicsButton]}>
-                  <Text style={styles.cardButtonText}>Start Learning</Text>
+                <View style={styles.cardTextWrap}>
+                  <Text style={styles.cardTitle}>Physics</Text>
+                  <Text style={styles.cardDescription}>
+                    Light, mirrors, lenses & circuits — see how things work!
+                  </Text>
+                </View>
+                <View style={styles.cardArrow}>
+                  <Text style={styles.cardArrowText}>→</Text>
                 </View>
               </LinearGradient>
             </TouchableOpacity>
@@ -114,27 +102,26 @@ export default function HomeScreen({ navigation }) {
             {/* Chemistry Card */}
             <TouchableOpacity
               style={styles.subjectCard}
-              activeOpacity={0.8}
+              activeOpacity={0.85}
               onPress={handleChemistryPress}
             >
               <LinearGradient
-                colors={["rgba(100, 255, 218, 0.15)", "rgba(31, 207, 166, 1)"]}
+                colors={["#11998E", "#38EF7D"]}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
                 style={styles.cardInner}
               >
-                <View style={styles.cardHeader}>
-                  <View style={[styles.cardIcon, styles.chemistryIconBg]}>
-                    <Text style={styles.iconText}>🧪</Text>
-                  </View>
-                  <Text style={styles.cardTitle}>Chemistry</Text>
+                <View style={styles.cardEmojiWrap}>
+                  <Text style={styles.cardEmoji}>🧪</Text>
                 </View>
-                <Text style={styles.cardDescription}>
-                  Visualize molecules, chemical bonds, and reactions in a
-                  virtual lab.
-                </Text>
-                <View style={[styles.cardButton, styles.chemistryButton]}>
-                  <Text style={styles.cardButtonText}>Start Learning</Text>
+                <View style={styles.cardTextWrap}>
+                  <Text style={styles.cardTitle}>Chemistry</Text>
+                  <Text style={styles.cardDescription}>
+                    Atoms, molecules & cool reactions — explore the tiny world!
+                  </Text>
+                </View>
+                <View style={styles.cardArrow}>
+                  <Text style={styles.cardArrowText}>→</Text>
                 </View>
               </LinearGradient>
             </TouchableOpacity>
@@ -142,32 +129,36 @@ export default function HomeScreen({ navigation }) {
             {/* Biology Card */}
             <TouchableOpacity
               style={styles.subjectCard}
-              activeOpacity={0.8}
+              activeOpacity={0.85}
               onPress={handleBiologyPress}
             >
               <LinearGradient
-                colors={[
-                  "rgba(255, 107, 107, 0.15)",
-                  "rgba(255, 26, 26, 0.78)",
-                ]}
+                colors={["#F857A6", "#FF5858"]}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
                 style={styles.cardInner}
               >
-                <View style={styles.cardHeader}>
-                  <View style={[styles.cardIcon, styles.biologyIconBg]}>
-                    <Text style={styles.iconText}>🧬</Text>
-                  </View>
-                  <Text style={styles.cardTitle}>Biology</Text>
+                <View style={styles.cardEmojiWrap}>
+                  <Text style={styles.cardEmoji}>🧬</Text>
                 </View>
-                <Text style={styles.cardDescription}>
-                  Study cell structures, human anatomy, and ecosystems up close.
-                </Text>
-                <View style={[styles.cardButton, styles.biologyButton]}>
-                  <Text style={styles.cardButtonText}>Start Learning</Text>
+                <View style={styles.cardTextWrap}>
+                  <Text style={styles.cardTitle}>Biology</Text>
+                  <Text style={styles.cardDescription}>
+                    Cells, brain, heart & more — discover how life works!
+                  </Text>
+                </View>
+                <View style={styles.cardArrow}>
+                  <Text style={styles.cardArrowText}>→</Text>
                 </View>
               </LinearGradient>
             </TouchableOpacity>
+          </View>
+
+          <View style={styles.funFact}>
+            <Text style={styles.funFactEmoji}>💡</Text>
+            <Text style={styles.funFactText}>
+              Fun fact: Your brain has about 86 billion neurons!
+            </Text>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -181,39 +172,35 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: "absolute",
-    top: 60,
+    top: 58,
     left: 20,
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: "rgba(178, 207, 249, 0.9)",
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    backgroundColor: "rgba(0, 0, 0, 0.06)",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 10,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.2)",
   },
   backButtonText: {
-    color: "#E0E1DD",
-    top: -2,
+    color: "#5A4E3C",
+    top: -1,
     fontSize: 24,
     fontWeight: "bold",
   },
   profileButton: {
     position: "absolute",
-    top: 60,
+    top: 58,
     right: 20,
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: 46,
+    height: 46,
+    borderRadius: 23,
     overflow: "hidden",
     zIndex: 10,
-    borderWidth: 2,
-    borderColor: "rgba(255, 255, 255, 0.3)",
-    shadowColor: "#4895EF",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.5,
-    shadowRadius: 4,
+    shadowColor: "#FF6B6B",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
     elevation: 5,
   },
   profileButtonGradient: {
@@ -230,100 +217,108 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollContent: {
-    paddingHorizontal: 20,
-    paddingTop: 100,
+    paddingHorizontal: 22,
+    paddingTop: 110,
     paddingBottom: 40,
   },
   headerSection: {
-    alignItems: "center",
-    marginBottom: 40,
+    marginBottom: 30,
+  },
+  greeting: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#B8860B",
+    marginBottom: 6,
   },
   title: {
-    fontSize: 32,
-    fontWeight: "800",
-    color: "#E0E1DD",
-    textAlign: "center",
-    letterSpacing: 1.2,
+    fontSize: 30,
+    fontWeight: "900",
+    color: "#3D2C1E",
+    lineHeight: 38,
     marginBottom: 8,
   },
   subtitle: {
-    fontSize: 18,
-    color: "#ffffffff",
-    textAlign: "center",
+    fontSize: 16,
+    color: "#8B7355",
     fontWeight: "500",
   },
   mainContent: {
-    paddingHorizontal: 5,
+    gap: 16,
   },
   subjectCard: {
-    marginBottom: 25,
-    borderRadius: 25,
+    borderRadius: 22,
     overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.1)",
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.4,
-    shadowRadius: 15,
-    elevation: 20,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.15,
+    shadowRadius: 12,
+    elevation: 8,
   },
   cardInner: {
-    padding: 24,
-  },
-  cardHeader: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 16,
+    padding: 20,
+    paddingVertical: 24,
   },
-  cardIcon: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+  cardEmojiWrap: {
+    width: 56,
+    height: 56,
+    borderRadius: 18,
+    backgroundColor: "rgba(255,255,255,0.25)",
     justifyContent: "center",
     alignItems: "center",
-    marginRight: 15,
+    marginRight: 16,
   },
-  physicsIconBg: {
-    backgroundColor: "rgba(68, 123, 222, 0.2)",
+  cardEmoji: {
+    fontSize: 30,
   },
-  chemistryIconBg: {
-    backgroundColor: "rgba(100, 255, 218, 0.2)",
-  },
-  biologyIconBg: {
-    backgroundColor: "rgba(255, 107, 107, 0.2)",
-  },
-  iconText: {
-    fontSize: 32,
+  cardTextWrap: {
+    flex: 1,
   },
   cardTitle: {
-    fontSize: 26,
-    fontWeight: "bold",
-    color: "#ffffffff",
+    fontSize: 22,
+    fontWeight: "800",
+    color: "#FFFFFF",
+    marginBottom: 4,
   },
   cardDescription: {
-    fontSize: 15,
-    color: "#ffffffff",
-    lineHeight: 22,
-    marginBottom: 20,
+    fontSize: 13,
+    color: "rgba(255,255,255,0.85)",
+    lineHeight: 18,
   },
-  cardButton: {
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderRadius: 25,
-    alignSelf: "flex-start",
+  cardArrow: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: "rgba(255,255,255,0.2)",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 10,
   },
-  physicsButton: {
-    backgroundColor: "#4895EF",
-  },
-  chemistryButton: {
-    backgroundColor: "#4CC9F0",
-  },
-  biologyButton: {
-    backgroundColor: "#FF6B6B",
-  },
-  cardButtonText: {
-    color: "#FFFFFF",
-    fontSize: 15,
+  cardArrowText: {
+    fontSize: 18,
     fontWeight: "bold",
+    color: "#FFFFFF",
+  },
+  funFact: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(255,255,255,0.6)",
+    borderRadius: 16,
+    padding: 16,
+    marginTop: 28,
+    borderWidth: 1,
+    borderColor: "rgba(0,0,0,0.05)",
+  },
+  funFactEmoji: {
+    fontSize: 24,
+    marginRight: 12,
+  },
+  funFactText: {
+    flex: 1,
+    fontSize: 14,
+    color: "#5A4E3C",
+    fontWeight: "500",
+    lineHeight: 20,
   },
 });

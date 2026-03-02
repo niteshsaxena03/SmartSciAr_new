@@ -45,6 +45,38 @@ export const chemistryModels = {
       "• Essential for understanding periodic trends, chemical bonding theories, and the foundation of modern chemistry and physics.",
     ],
   },
+  orbitalF: {
+    id: "orbitalF",
+    title: "F Orbital",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/f5-orbital-1939ab263ffc4e07a005221d55779aec",
+    embedUrl:
+      "https://sketchfab.com/models/1939ab263ffc4e07a005221d55779aec/embed",
+    description: [
+      "• Complex three-dimensional electron probability distributions found in atoms with principal quantum number n≥4, showing intricate shapes with multiple lobes and nodes.",
+      "• F orbitals have seven different orientations (ml = -3 to +3) and can hold up to 14 electrons, playing crucial roles in the chemistry of lanthanides and actinides.",
+      "• These orbitals demonstrate advanced quantum mechanical concepts including angular momentum, magnetic quantum numbers, and electron spin-orbit coupling effects.",
+      "• Understanding f orbitals is essential for explaining the unique properties of rare earth elements, their magnetic behavior, and their applications in modern technology.",
+      "• Critical for advanced topics in inorganic chemistry, including coordination complexes, electronic transitions, and the special properties of f-block elements.",
+    ],
+  },
+
+  orbitalDxz: {
+    id: "orbitalDxz",
+    title: "Dxz Orbital",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/dxz-112bced864714f21b5ea7c5724f95276",
+    embedUrl:
+      "https://sketchfab.com/models/112bced864714f21b5ea7c5724f95276/embed",
+    description: [
+      "• One of the five d orbitals with a distinctive four-lobed shape oriented along the x and z axes, demonstrating the complex geometry of transition metal electron distributions.",
+      "• Shows how d orbitals split in energy when transition metals form coordination complexes, affecting color, magnetism, and chemical reactivity.",
+      "• Essential for understanding crystal field theory, ligand field theory, and how the electronic structure of transition metals determines their unique properties.",
+      "• Plays a crucial role in transition metal chemistry, including catalysis, coordination compounds, and the formation of colored complexes.",
+      "• Understanding d orbital shapes and orientations is fundamental to explaining bonding in organometallic compounds and transition metal catalysts.",
+    ],
+  },
+
   cyclohexane: {
     id: "cyclohexane",
     title: "Cyclohexane Chair",
@@ -60,41 +92,6 @@ export const chemistryModels = {
       "• Fundamental to organic chemistry education, illustrating concepts of molecular flexibility, conformational equilibria, and three-dimensional molecular structure.",
     ],
   },
-  
-
-  benzene: {
-    id: "benzene",
-    title: "Benzene Molecule",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/chemistry-benzene-7fc04cef71174d93893db16e364768f5",
-    embedUrl:
-      "https://sketchfab.com/models/7fc04cef71174d93893db16e364768f5/embed",
-    description: [
-      "• A fundamental aromatic hydrocarbon with the molecular formula C₆H₆, featuring a hexagonal ring structure with alternating single and double bonds.",
-      "• The benzene ring exhibits resonance, where electrons are delocalized across all six carbon atoms, creating exceptional stability and unique chemical properties.",
-      "• This aromatic compound serves as the basic building block for many important organic compounds including plastics, dyes, pharmaceuticals, and synthetic materials.",
-      "• Benzene's planar structure and electron delocalization make it less reactive than typical alkenes, requiring special conditions for substitution reactions.",
-      "• Understanding benzene structure is essential for organic chemistry, as it forms the foundation for studying aromatic compounds and their reactions.",
-    ],
-  },
-
-  water: {
-    id: "water",
-    title: "Water Molecule (H₂O)",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/h2o-molecule-e181944932084b5dbb4d5b625a5e9b10",
-    embedUrl:
-      "https://sketchfab.com/models/e181944932084b5dbb4d5b625a5e9b10/embed",
-    description: [
-      "• The most abundant and essential compound on Earth, consisting of two hydrogen atoms covalently bonded to one oxygen atom in a bent molecular geometry.",
-      "• Water's bent shape (104.5° bond angle) and polar nature create hydrogen bonding between molecules, giving water its unique properties like high boiling point and surface tension.",
-      "• Acts as the universal solvent due to its polarity, enabling it to dissolve ionic compounds and polar molecules, making it crucial for all biological processes.",
-      "• Exhibits unusual properties like density maximum at 4°C and expansion upon freezing, which are vital for aquatic life and Earth's climate systems.",
-      "• Water molecules participate in countless chemical reactions as reactants, products, or solvents, making them fundamental to both organic and inorganic chemistry.",
-    ],
-  },
-
-  
 
   molecule: {
     id: "molecule",
@@ -208,39 +205,37 @@ export const chemistryModels = {
     ],
   },
 
-  orbitalF: {
-    id: "orbitalF",
-    title: "F Orbital",
+  water: {
+    id: "water",
+    title: "Water Molecule (H₂O)",
     sketchfabUrl:
-      "https://sketchfab.com/3d-models/f5-orbital-1939ab263ffc4e07a005221d55779aec",
+      "https://sketchfab.com/3d-models/h2o-molecule-e181944932084b5dbb4d5b625a5e9b10",
     embedUrl:
-      "https://sketchfab.com/models/1939ab263ffc4e07a005221d55779aec/embed",
+      "https://sketchfab.com/models/e181944932084b5dbb4d5b625a5e9b10/embed",
     description: [
-      "• Complex three-dimensional electron probability distributions found in atoms with principal quantum number n≥4, showing intricate shapes with multiple lobes and nodes.",
-      "• F orbitals have seven different orientations (ml = -3 to +3) and can hold up to 14 electrons, playing crucial roles in the chemistry of lanthanides and actinides.",
-      "• These orbitals demonstrate advanced quantum mechanical concepts including angular momentum, magnetic quantum numbers, and electron spin-orbit coupling effects.",
-      "• Understanding f orbitals is essential for explaining the unique properties of rare earth elements, their magnetic behavior, and their applications in modern technology.",
-      "• Critical for advanced topics in inorganic chemistry, including coordination complexes, electronic transitions, and the special properties of f-block elements.",
+      "• The most abundant and essential compound on Earth, consisting of two hydrogen atoms covalently bonded to one oxygen atom in a bent molecular geometry.",
+      "• Water's bent shape (104.5° bond angle) and polar nature create hydrogen bonding between molecules, giving water its unique properties like high boiling point and surface tension.",
+      "• Acts as the universal solvent due to its polarity, enabling it to dissolve ionic compounds and polar molecules, making it crucial for all biological processes.",
+      "• Exhibits unusual properties like density maximum at 4°C and expansion upon freezing, which are vital for aquatic life and Earth's climate systems.",
+      "• Water molecules participate in countless chemical reactions as reactants, products, or solvents, making them fundamental to both organic and inorganic chemistry.",
     ],
   },
 
-  orbitalDxz: {
-    id: "orbitalDxz",
-    title: "Dxz Orbital",
+  benzene: {
+    id: "benzene",
+    title: "Benzene Molecule",
     sketchfabUrl:
-      "https://sketchfab.com/3d-models/dxz-112bced864714f21b5ea7c5724f95276",
+      "https://sketchfab.com/3d-models/chemistry-benzene-7fc04cef71174d93893db16e364768f5",
     embedUrl:
-      "https://sketchfab.com/models/112bced864714f21b5ea7c5724f95276/embed",
+      "https://sketchfab.com/models/7fc04cef71174d93893db16e364768f5/embed",
     description: [
-      "• One of the five d orbitals with a distinctive four-lobed shape oriented along the x and z axes, demonstrating the complex geometry of transition metal electron distributions.",
-      "• Shows how d orbitals split in energy when transition metals form coordination complexes, affecting color, magnetism, and chemical reactivity.",
-      "• Essential for understanding crystal field theory, ligand field theory, and how the electronic structure of transition metals determines their unique properties.",
-      "• Plays a crucial role in transition metal chemistry, including catalysis, coordination compounds, and the formation of colored complexes.",
-      "• Understanding d orbital shapes and orientations is fundamental to explaining bonding in organometallic compounds and transition metal catalysts.",
+      "• A fundamental aromatic hydrocarbon with the molecular formula C₆H₆, featuring a hexagonal ring structure with alternating single and double bonds.",
+      "• The benzene ring exhibits resonance, where electrons are delocalized across all six carbon atoms, creating exceptional stability and unique chemical properties.",
+      "• This aromatic compound serves as the basic building block for many important organic compounds including plastics, dyes, pharmaceuticals, and synthetic materials.",
+      "• Benzene's planar structure and electron delocalization make it less reactive than typical alkenes, requiring special conditions for substitution reactions.",
+      "• Understanding benzene structure is essential for organic chemistry, as it forms the foundation for studying aromatic compounds and their reactions.",
     ],
   },
-
-  
 
   dopamine: {
     id: "dopamine",

@@ -13,6 +13,11 @@ import { LinearGradient } from "expo-linear-gradient";
 export default function ChemistryScreen({ navigation }) {
   const chemistryTopics = [
     {
+      title: "Water Ball-and-Stick Model",
+      modelId: "waterBallStick",
+      hasModel: true,
+    },
+    {
       title: "Atomic Structure & Periodic Table",
       modelId: "atom",
       hasModel: true,
@@ -23,33 +28,28 @@ export default function ChemistryScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Periodic Table of Elements",
-      modelId: "periodicTable",
+      title: "F Orbital - Quantum Chemistry",
+      modelId: "orbitalF",
       hasModel: true,
     },
     {
-      title: "Water Molecule (H₂O)",
-      modelId: "water",
+      title: "Dxz Orbital - Transition Metals",
+      modelId: "orbitalDxz",
       hasModel: true,
     },
     {
-      title: "Water Ball-and-Stick Model",
-      modelId: "waterBallStick",
-      hasModel: true,
-    },
-    {
-      title: "Liquid Water Structure",
-      modelId: "liquidWater",
-      hasModel: true,
-    },
-    {
-      title: "Benzene - Aromatic Compounds",
-      modelId: "benzene",
+      title: "Cyclohexane Chair Conformation",
+      modelId: "cyclohexane",
       hasModel: true,
     },
     {
       title: "Molecular Structure & Bonding",
       modelId: "molecule",
+      hasModel: true,
+    },
+    {
+      title: "Periodic Table of Elements",
+      modelId: "periodicTable",
       hasModel: true,
     },
     {
@@ -78,18 +78,13 @@ export default function ChemistryScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "F Orbital - Quantum Chemistry",
-      modelId: "orbitalF",
+      title: "Water Molecule (H₂O)",
+      modelId: "water",
       hasModel: true,
     },
     {
-      title: "Dxz Orbital - Transition Metals",
-      modelId: "orbitalDxz",
-      hasModel: true,
-    },
-    {
-      title: "Cyclohexane Chair Conformation",
-      modelId: "cyclohexane",
+      title: "Benzene - Aromatic Compounds",
+      modelId: "benzene",
       hasModel: true,
     },
     {
@@ -100,6 +95,11 @@ export default function ChemistryScreen({ navigation }) {
     {
       title: "Phenol - Aromatic Alcohols",
       modelId: "phenol",
+      hasModel: true,
+    },
+    {
+      title: "Liquid Water Structure",
+      modelId: "liquidWater",
       hasModel: true,
     },
     {

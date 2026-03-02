@@ -12,25 +12,25 @@ import { LinearGradient } from "expo-linear-gradient";
 
 export default function BiologyScreen({ navigation }) {
   const biologyTopics = [
+    { title: "Neuron Structure", modelId: "neuron", hasModel: true },
+    { title: "Animal Cell Structure", modelId: "animalCell", hasModel: true },
+    { title: "Human Brain Structure", modelId: "humanBrain", hasModel: true },
     {
       title: "Cell Model - Basic Structure",
       modelId: "cellModel",
       hasModel: true,
     },
     { title: "Plant Cell Structure", modelId: "plantCell", hasModel: true },
-    { title: "Animal Cell Structure", modelId: "animalCell", hasModel: true },
+    { title: "Heart and Lungs", modelId: "heartLungs", hasModel: true },
+    { title: "Digestive System", modelId: "digestiveSystem", hasModel: true },
     { title: "Human Cell", modelId: "humanCell", hasModel: true },
     { title: "Prokaryotic Cell", modelId: "prokaryoteCell", hasModel: true },
-    { title: "Neuron Structure", modelId: "neuron", hasModel: true },
     { title: "DNA & RNA Structure", modelId: "dnaRna", hasModel: true },
     { title: "Human Heart", modelId: "humanHeart", hasModel: true },
-    { title: "Human Brain Structure", modelId: "humanBrain", hasModel: true },
     { title: "Human Eye Structure", modelId: "humanEye", hasModel: true },
     { title: "Human Skull", modelId: "humanSkull", hasModel: true },
     { title: "Human Skeleton", modelId: "skeleton", hasModel: true },
-    { title: "Digestive System", modelId: "digestiveSystem", hasModel: true },
     { title: "Excretory System", modelId: "excretorySystem", hasModel: true },
-    { title: "Heart and Lungs", modelId: "heartLungs", hasModel: true },
     { title: "Coronavirus (COVID-19)", modelId: "coronavirus", hasModel: true },
     {
       title: "Female Muscular System",

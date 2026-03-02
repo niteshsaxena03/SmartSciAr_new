@@ -476,6 +476,91 @@ export const quizData = {
       ],
     },
 
+    orbitalF: {
+      questions: [
+        {
+          id: 1,
+          question: "What is the minimum principal quantum number (n) for f orbitals to exist?",
+          options: ["n = 1", "n = 2", "n = 3", "n = 4"],
+          correctAnswer: 3,
+        },
+        {
+          id: 2,
+          question: "How many f orbitals are there in a given subshell?",
+          options: ["3", "5", "7", "9"],
+          correctAnswer: 2,
+        },
+        {
+          id: 3,
+          question: "What is the maximum number of electrons f orbitals can hold?",
+          options: ["6", "10", "14", "18"],
+          correctAnswer: 2,
+        },
+        {
+          id: 4,
+          question: "Which block of elements in the periodic table involves f orbitals?",
+          options: [
+            "s-block",
+            "p-block",
+            "d-block",
+            "f-block (lanthanides and actinides)",
+          ],
+          correctAnswer: 3,
+        },
+        {
+          id: 5,
+          question: "What is the azimuthal quantum number (l) for f orbitals?",
+          options: ["0", "1", "2", "3"],
+          correctAnswer: 3,
+        },
+      ],
+    },
+
+    orbitalDxz: {
+      questions: [
+        {
+          id: 1,
+          question: "How many d orbitals exist in a given subshell?",
+          options: ["3", "5", "7", "9"],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "What is the azimuthal quantum number (l) for d orbitals?",
+          options: ["0", "1", "2", "3"],
+          correctAnswer: 2,
+        },
+        {
+          id: 3,
+          question: "What causes d orbital splitting in transition metal complexes?",
+          options: [
+            "Temperature changes",
+            "Interaction with ligands (crystal field effect)",
+            "Nuclear decay",
+            "Gravitational forces",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "What is the maximum number of electrons all five d orbitals can hold?",
+          options: ["6", "8", "10", "14"],
+          correctAnswer: 2,
+        },
+        {
+          id: 5,
+          question: "The Dxz orbital has lobes oriented along which axes?",
+          options: [
+            "x and y axes",
+            "x and z axes",
+            "y and z axes",
+            "Along all three axes",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
     benzene: {
       // Benzene Molecule
       questions: [

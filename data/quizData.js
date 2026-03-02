@@ -310,6 +310,61 @@ export const quizData = {
 
   // Chemistry Quizzes
   chemistry: {
+    waterBallStick: {
+      questions: [
+        {
+          id: 1,
+          question: "What is the bond angle in a water molecule?",
+          options: ["90°", "104.5°", "109.5°", "180°"],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "Why does the water molecule have a bent shape?",
+          options: [
+            "Due to single bonds only",
+            "Due to two lone pairs on oxygen repelling bonding pairs",
+            "Due to hydrogen bonding",
+            "Due to equal electronegativity",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "What does the ball-and-stick model represent?",
+          options: [
+            "Only bond angles",
+            "Atoms as balls and bonds as sticks showing geometry",
+            "Electron cloud distribution",
+            "Nuclear structure only",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "What creates the dipole moment in water?",
+          options: [
+            "Equal charge distribution",
+            "The bent shape and difference in electronegativity",
+            "Metallic bonding",
+            "Hydrogen atoms being larger than oxygen",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "What is the electron geometry around the oxygen atom in water?",
+          options: [
+            "Linear",
+            "Trigonal planar",
+            "Tetrahedral",
+            "Octahedral",
+          ],
+          correctAnswer: 2,
+        },
+      ],
+    },
+
     atom: {
       // Atomic Structure
       questions: [
@@ -360,6 +415,61 @@ export const quizData = {
             "In energy levels/shells around nucleus",
             "Between protons and neutrons",
             "Outside the atom",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
+    cyclohexane: {
+      questions: [
+        {
+          id: 1,
+          question: "What is the molecular formula of cyclohexane?",
+          options: ["C₆H₆", "C₆H₁₂", "C₆H₁₀", "C₆H₁₄"],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "Why does cyclohexane adopt a chair conformation?",
+          options: [
+            "To increase ring strain",
+            "To minimize steric strain and achieve optimal bond angles",
+            "Because it is aromatic",
+            "Due to double bonds in the ring",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "What are the two types of hydrogen positions in chair cyclohexane?",
+          options: [
+            "Cis and trans",
+            "Axial and equatorial",
+            "Alpha and beta",
+            "Primary and secondary",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "Which position is generally more stable for substituents on cyclohexane?",
+          options: [
+            "Axial",
+            "Equatorial",
+            "Both are equally stable",
+            "Neither is stable",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "Cyclohexane is an example of which type of hydrocarbon?",
+          options: [
+            "Aromatic",
+            "Cycloalkane (saturated cyclic)",
+            "Alkene",
+            "Alkyne",
           ],
           correctAnswer: 1,
         },
@@ -593,6 +703,121 @@ export const quizData = {
 
   // Biology Quizzes
   biology: {
+    neuron: {
+      questions: [
+        {
+          id: 1,
+          question: "What part of the neuron receives signals from other neurons?",
+          options: ["Axon", "Dendrites", "Cell body", "Myelin sheath"],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "What is the function of the axon?",
+          options: [
+            "Receive incoming signals",
+            "Transmit electrical impulses away from the cell body",
+            "Produce neurotransmitters only",
+            "Store genetic material",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "How do neurons communicate with each other?",
+          options: [
+            "Direct physical contact",
+            "Through neurotransmitters at synapses",
+            "Through blood vessels",
+            "Through hormones only",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "What is the gap between two neurons called?",
+          options: [
+            "Axon terminal",
+            "Synapse",
+            "Node of Ranvier",
+            "Dendrite junction",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "What does the myelin sheath do?",
+          options: [
+            "Produces neurotransmitters",
+            "Insulates the axon and speeds up signal transmission",
+            "Receives signals from other neurons",
+            "Stores nutrients for the neuron",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
+    humanBrain: {
+      questions: [
+        {
+          id: 1,
+          question: "Which part of the brain is responsible for decision-making and reasoning?",
+          options: [
+            "Cerebellum",
+            "Frontal lobe",
+            "Brainstem",
+            "Occipital lobe",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "What does the cerebellum control?",
+          options: [
+            "Memory and emotions",
+            "Balance and coordination",
+            "Vision and hearing",
+            "Breathing and heart rate",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "Which brain region controls involuntary functions like breathing?",
+          options: [
+            "Cerebrum",
+            "Cerebellum",
+            "Brainstem",
+            "Temporal lobe",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 4,
+          question: "Which lobe of the brain processes visual information?",
+          options: [
+            "Frontal lobe",
+            "Parietal lobe",
+            "Temporal lobe",
+            "Occipital lobe",
+          ],
+          correctAnswer: 3,
+        },
+        {
+          id: 5,
+          question: "What is the largest part of the human brain?",
+          options: [
+            "Cerebellum",
+            "Brainstem",
+            "Cerebrum",
+            "Hypothalamus",
+          ],
+          correctAnswer: 2,
+        },
+      ],
+    },
+
     cellModel: {
       // Cell Model - Basic Structure
       questions: [

@@ -11,6 +11,7 @@ import {
   Dimensions,
 } from "react-native";
 import { WebView } from "react-native-webview";
+import * as Speech from "expo-speech";
 import QuizModal from "./QuizModal";
 import { hasQuiz, getQuizByModel } from "../data/quizData";
 
@@ -21,7 +22,8 @@ const ModelViewer = ({ modelData, navigation, subject }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [showDescription, setShowDescription] = useState(false);
   const [quizVisible, setQuizVisible] = useState(false);
-  
+  const [isSpeaking, setIsSpeaking] = useState(false);
+
   // Check if this model has a quiz
   const modelHasQuiz = hasQuiz(subject, id);
   const quizData = modelHasQuiz ? getQuizByModel(subject, id) : null;
@@ -103,6 +105,30 @@ const ModelViewer = ({ modelData, navigation, subject }) => {
   const toggleDescription = () => {
     setShowDescription(!showDescription);
   };
+
+  const handleSpeak = async () => {
+    const speaking = await Speech.isSpeakingAsync();
+    if (speaking) {
+      Speech.stop();
+      setIsSpeaking(false);
+    } else {
+      const text = description.map((p) => p.replace(/^•\s*/, "")).join(". ");
+      setIsSpeaking(true);
+      Speech.speak(text, {
+        language: "en",
+        rate: 0.95,
+        onDone: () => setIsSpeaking(false),
+        onStopped: () => setIsSpeaking(false),
+        onError: () => setIsSpeaking(false),
+      });
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      Speech.stop();
+    };
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -272,6 +298,39 @@ const ModelViewer = ({ modelData, navigation, subject }) => {
               <Text style={styles.quizButtonIcon}>📝</Text>
               <Text style={styles.quizButtonText}>Take Quiz</Text>
               <Text style={styles.quizButtonSubtext}>Test your knowledge</Text>
+            </TouchableOpacity>
+          </Animated.View>
+        )}
+
+        {/* Listen Button */}
+        {modelHasQuiz && (
+          <Animated.View
+            style={[
+              styles.listenButtonContainer,
+              {
+                opacity: fadeAnim,
+                transform: [{ translateY: slideAnim }, { scale: scaleAnim }],
+              },
+            ]}
+          >
+            <TouchableOpacity
+              style={[
+                styles.listenButton,
+                isSpeaking && styles.listenButtonActive,
+              ]}
+              onPress={handleSpeak}
+              activeOpacity={0.85}
+            >
+              <View style={styles.listenButtonGlow} />
+              <Text style={styles.listenButtonIcon}>
+                {isSpeaking ? "⏹️" : "🔊"}
+              </Text>
+              <Text style={styles.listenButtonText}>
+                {isSpeaking ? "Stop" : "Listen"}
+              </Text>
+              <Text style={styles.listenButtonSubtext}>
+                {isSpeaking ? "Tap to stop audio" : "Hear the description"}
+              </Text>
             </TouchableOpacity>
           </Animated.View>
         )}
@@ -613,6 +672,51 @@ const styles = StyleSheet.create({
   },
   quizButtonSubtext: {
     color: "rgba(255, 165, 0, 0.7)",
+    fontSize: 14,
+    fontWeight: "400",
+  },
+  listenButtonContainer: {
+    marginBottom: 25,
+  },
+  listenButton: {
+    backgroundColor: "rgba(138, 43, 226, 0.1)",
+    borderRadius: 20,
+    padding: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1.5,
+    borderColor: "#8A2BE2",
+    position: "relative",
+    shadowColor: "#8A2BE2",
+    shadowOpacity: 0.4,
+    shadowRadius: 20,
+  },
+  listenButtonActive: {
+    backgroundColor: "rgba(138, 43, 226, 0.2)",
+    borderColor: "#A855F7",
+  },
+  listenButtonGlow: {
+    position: "absolute",
+    top: -2,
+    left: -2,
+    right: -2,
+    bottom: -2,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: "rgba(138, 43, 226, 0.4)",
+  },
+  listenButtonIcon: {
+    fontSize: 30,
+    marginBottom: 8,
+  },
+  listenButtonText: {
+    color: "#8A2BE2",
+    fontSize: 20,
+    fontWeight: "700",
+    marginBottom: 4,
+  },
+  listenButtonSubtext: {
+    color: "rgba(138, 43, 226, 0.7)",
     fontSize: 14,
     fontWeight: "400",
   },

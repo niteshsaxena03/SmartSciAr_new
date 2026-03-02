@@ -48,7 +48,10 @@ const ARModelViewer = ({ modelData, navigation }) => {
         <TouchableOpacity style={styles.button} onPress={requestPermission}>
           <Text style={styles.buttonText}>Grant Permission</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, { backgroundColor: "#ff6b6b" }]} onPress={handleBack}>
+        <TouchableOpacity
+          style={[styles.button, { backgroundColor: "#ff6b6b" }]}
+          onPress={handleBack}
+        >
           <Text style={styles.buttonText}>Go Back</Text>
         </TouchableOpacity>
       </View>
@@ -81,10 +84,7 @@ const ARModelViewer = ({ modelData, navigation }) => {
             />
           </Animatable.View>
         ) : (
-          <Animatable.View
-            animation="fadeIn"
-            style={styles.loadingContainer}
-          >
+          <Animatable.View animation="fadeIn" style={styles.loadingContainer}>
             <ActivityIndicator size="large" color="#4ecdc4" />
             <Text style={styles.loadingText}>Loading AR Model...</Text>
           </Animatable.View>
@@ -108,8 +108,9 @@ const ARModelViewer = ({ modelData, navigation }) => {
           >
             <Text style={styles.infoTitle}>✨ AR Model</Text>
             <Text style={styles.infoText}>
-              You’re viewing a 3D <Text style={{ fontWeight: "bold" }}>{title}</Text> in AR.
-              Move your phone to see it blend into your real environment.
+              You’re viewing a 3D{" "}
+              <Text style={{ fontWeight: "bold" }}>{title}</Text> in AR. Move
+              your phone to see it blend into your real environment.
             </Text>
           </Animatable.View>
         )}
@@ -138,11 +139,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   modelViewer: {
-    width: width - 40,
-    height: height - 220,
+    width: width,
+    height: height,
     backgroundColor: "transparent",
-    borderRadius: 12,
-    overflow: "hidden",
   },
   ui: {
     position: "absolute",

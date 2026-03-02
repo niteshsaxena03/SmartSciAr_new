@@ -903,6 +903,126 @@ export const quizData = {
       ],
     },
 
+    digestiveSystem: {
+      questions: [
+        {
+          id: 1,
+          question: "Where does most nutrient absorption take place?",
+          options: [
+            "Stomach",
+            "Small intestine",
+            "Large intestine",
+            "Esophagus",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "What is the role of villi in the small intestine?",
+          options: [
+            "Produce digestive enzymes",
+            "Increase surface area for absorption",
+            "Store bile",
+            "Break down fats mechanically",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "Which organ produces bile to help digest fats?",
+          options: [
+            "Stomach",
+            "Pancreas",
+            "Liver",
+            "Small intestine",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 4,
+          question: "What type of digestion occurs when you chew food?",
+          options: [
+            "Chemical digestion",
+            "Mechanical digestion",
+            "Enzymatic digestion",
+            "Bacterial digestion",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "What does the stomach use to break down food chemically?",
+          options: [
+            "Bile",
+            "Hydrochloric acid and pepsin",
+            "Insulin",
+            "Saliva",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
+    heartLungs: {
+      questions: [
+        {
+          id: 1,
+          question: "What is the primary function of the lungs?",
+          options: [
+            "Pumping blood",
+            "Gas exchange (oxygen in, carbon dioxide out)",
+            "Filtering toxins",
+            "Producing hormones",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "Where does gas exchange occur in the lungs?",
+          options: [
+            "Bronchi",
+            "Trachea",
+            "Alveoli",
+            "Pharynx",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 3,
+          question: "What type of blood does the pulmonary artery carry?",
+          options: [
+            "Oxygenated blood",
+            "Deoxygenated blood",
+            "Mixed blood",
+            "Plasma only",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "Which side of the heart pumps blood to the lungs?",
+          options: [
+            "Left side",
+            "Right side",
+            "Both sides equally",
+            "Neither, the lungs pump their own blood",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "What is pulmonary circulation?",
+          options: [
+            "Blood flow from heart to body and back",
+            "Blood flow between heart and lungs for gas exchange",
+            "Blood flow within the brain",
+            "Blood flow through the digestive system",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
     cellModel: {
       // Cell Model - Basic Structure
       questions: [

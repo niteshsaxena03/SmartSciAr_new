@@ -45,42 +45,6 @@ export const biologyModels = {
     ],
   },
   
-  cellModel: {
-    id: "cellModel",
-    title: "Cell Model - Basic Structure",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/crell-model-for-biology-41bc3f762c8547fbad78a27ef2263125",
-    embedUrl:
-      "https://sketchfab.com/models/41bc3f762c8547fbad78a27ef2263125/embed",
-    // AR Model Configuration
-    modelFile: "./assets/models/CellModel/cell.gltf",
-    scale: [0.3, 0.3, 0.3], // Adjust size for mobile viewing
-    position: [0, 0, -1.5], // 1.5 meters from camera
-    description: [
-      "• The fundamental unit of life showing the basic cellular components including cell membrane, nucleus, cytoplasm, and various organelles essential for cellular function.",
-      "• Demonstrates the relationship between structure and function in cells, showing how different organelles work together to maintain life processes like metabolism and reproduction.",
-      "• Illustrates the concept of cellular organization and compartmentalization, where specific organelles perform specialized functions within the protected cellular environment.",
-      "• Essential for understanding how cells maintain homeostasis, process energy, synthesize proteins, and respond to environmental changes through coordinated organelle activities.",
-      "• Foundation for studying more complex biological systems, as all multicellular organisms are built from these basic cellular units working in harmony.",
-    ],
-  },
-
-  plantCell: {
-    id: "plantCell",
-    title: "Plant Cell Structure",
-    sketchfabUrl:
-      "https://sketchfab.com/3d-models/biology-plant-cell-0d87fbe2581b4cabae809bd6aaa7d56b",
-    embedUrl:
-      "https://sketchfab.com/models/0d87fbe2581b4cabae809bd6aaa7d56b/embed",
-    description: [  
-      "• Unique cellular structure featuring cell wall, chloroplasts, large central vacuole, and other specialized organelles that distinguish plants from animal cells.",
-      "• Shows chloroplasts containing chlorophyll for photosynthesis, the process that converts sunlight, carbon dioxide, and water into glucose and oxygen for energy.",
-      "• The rigid cell wall provides structural support and protection, while the large central vacuole maintains turgor pressure and stores water and nutrients.",
-      "• Demonstrates how plant cells are adapted for autotrophic nutrition, producing their own food through photosynthesis and serving as primary producers in ecosystems.",
-      "• Essential for understanding plant biology, agriculture, and the role of plants in global carbon cycling and oxygen production for all life on Earth.",
-    ],
-  },
-
   heartLungs: {
     id: "heartLungs",
     title: "Heart and Lungs",
@@ -110,6 +74,41 @@ export const biologyModels = {
       "• Demonstrates nutrient absorption in the small intestine through specialized villi that maximize surface area for efficient uptake into the bloodstream.",
       "• Illustrates the role of beneficial gut bacteria in digestion, immune function, and vitamin synthesis, highlighting the importance of microbiome health.",
       "• Essential for understanding nutrition, digestive disorders, food allergies, and how dietary choices affect overall health and disease prevention.",
+    ],
+  },
+
+  cellModel: {
+    id: "cellModel",
+    title: "Cell Model - Basic Structure",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/crell-model-for-biology-41bc3f762c8547fbad78a27ef2263125",
+    embedUrl:
+      "https://sketchfab.com/models/41bc3f762c8547fbad78a27ef2263125/embed",
+    modelFile: "./assets/models/CellModel/cell.gltf",
+    scale: [0.3, 0.3, 0.3],
+    position: [0, 0, -1.5],
+    description: [
+      "• The fundamental unit of life showing the basic cellular components including cell membrane, nucleus, cytoplasm, and various organelles essential for cellular function.",
+      "• Demonstrates the relationship between structure and function in cells, showing how different organelles work together to maintain life processes like metabolism and reproduction.",
+      "• Illustrates the concept of cellular organization and compartmentalization, where specific organelles perform specialized functions within the protected cellular environment.",
+      "• Essential for understanding how cells maintain homeostasis, process energy, synthesize proteins, and respond to environmental changes through coordinated organelle activities.",
+      "• Foundation for studying more complex biological systems, as all multicellular organisms are built from these basic cellular units working in harmony.",
+    ],
+  },
+
+  plantCell: {
+    id: "plantCell",
+    title: "Plant Cell Structure",
+    sketchfabUrl:
+      "https://sketchfab.com/3d-models/biology-plant-cell-0d87fbe2581b4cabae809bd6aaa7d56b",
+    embedUrl:
+      "https://sketchfab.com/models/0d87fbe2581b4cabae809bd6aaa7d56b/embed",
+    description: [
+      "• Unique cellular structure featuring cell wall, chloroplasts, large central vacuole, and other specialized organelles that distinguish plants from animal cells.",
+      "• Shows chloroplasts containing chlorophyll for photosynthesis, the process that converts sunlight, carbon dioxide, and water into glucose and oxygen for energy.",
+      "• The rigid cell wall provides structural support and protection, while the large central vacuole maintains turgor pressure and stores water and nutrients.",
+      "• Demonstrates how plant cells are adapted for autotrophic nutrition, producing their own food through photosynthesis and serving as primary producers in ecosystems.",
+      "• Essential for understanding plant biology, agriculture, and the role of plants in global carbon cycling and oxygen production for all life on Earth.",
     ],
   },
 

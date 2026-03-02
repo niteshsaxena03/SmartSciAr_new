@@ -303,37 +303,35 @@ const ModelViewer = ({ modelData, navigation, subject }) => {
         )}
 
         {/* Listen Button */}
-        {modelHasQuiz && (
-          <Animated.View
+        <Animated.View
+          style={[
+            styles.listenButtonContainer,
+            {
+              opacity: fadeAnim,
+              transform: [{ translateY: slideAnim }, { scale: scaleAnim }],
+            },
+          ]}
+        >
+          <TouchableOpacity
             style={[
-              styles.listenButtonContainer,
-              {
-                opacity: fadeAnim,
-                transform: [{ translateY: slideAnim }, { scale: scaleAnim }],
-              },
+              styles.listenButton,
+              isSpeaking && styles.listenButtonActive,
             ]}
+            onPress={handleSpeak}
+            activeOpacity={0.85}
           >
-            <TouchableOpacity
-              style={[
-                styles.listenButton,
-                isSpeaking && styles.listenButtonActive,
-              ]}
-              onPress={handleSpeak}
-              activeOpacity={0.85}
-            >
-              <View style={styles.listenButtonGlow} />
-              <Text style={styles.listenButtonIcon}>
-                {isSpeaking ? "⏹️" : "🔊"}
-              </Text>
-              <Text style={styles.listenButtonText}>
-                {isSpeaking ? "Stop" : "Listen"}
-              </Text>
-              <Text style={styles.listenButtonSubtext}>
-                {isSpeaking ? "Tap to stop audio" : "Hear the description"}
-              </Text>
-            </TouchableOpacity>
-          </Animated.View>
-        )}
+            <View style={styles.listenButtonGlow} />
+            <Text style={styles.listenButtonIcon}>
+              {isSpeaking ? "⏹️" : "🔊"}
+            </Text>
+            <Text style={styles.listenButtonText}>
+              {isSpeaking ? "Stop" : "Listen"}
+            </Text>
+            <Text style={styles.listenButtonSubtext}>
+              {isSpeaking ? "Tap to stop audio" : "Hear the description"}
+            </Text>
+          </TouchableOpacity>
+        </Animated.View>
 
         {/* Description */}
         {showDescription && (

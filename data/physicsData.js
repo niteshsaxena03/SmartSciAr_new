@@ -1,33 +1,33 @@
 export const physicsModels = {
-  decoration: {
-    id: "decoration",
-    title: "Newton's Cradle",
+  figure109: {
+    id: "figure109",
+    title: "The New Cartesian Sign Convention for Spherical Mirrors",
     sketchfabUrl:
-      "https://sketchfab.com/3d-models/decoration-5a0ea75cd5834fffaf1d8f72891d8df1",
+      "https://sketchfab.com/3d-models/figure-109-f447aea9b1924d09b5bfa767ce9593cb",
     embedUrl:
-      "https://sketchfab.com/models/5a0ea75cd5834fffaf1d8f72891d8df1/embed",
+      "https://sketchfab.com/models/f447aea9b1924d09b5bfa767ce9593cb/embed",
     description: [
-      "• A classic demonstration of conservation of momentum and energy using five identical pendulum balls suspended in a line.",
-      "• Shows how lifting and releasing one ball transfers momentum through the stationary balls, causing the ball on the opposite end to swing out.",
-      "• Illustrates Newton's laws of motion, particularly the conservation of momentum where momentum is transferred without the middle balls moving visibly.",
-      "• Demonstrates elastic collision principles where kinetic energy passes through the system with minimal loss during impact.",
-      "• Essential for understanding momentum transfer, collision physics, and how energy propagates through connected systems in mechanical physics.",
+      "• A fundamental reference system demonstrating the standardized sign conventions used in spherical mirror calculations and analysis.",
+      "• Shows how distances are measured: object distance (u), image distance (v), and focal length (f) with specific positive and negative assignments.",
+      "• Illustrates the pole as origin, with distances measured along the principal axis, and heights measured perpendicular to the principal axis.",
+      "• Demonstrates how this convention ensures consistency in mirror equations: 1/f = 1/u + 1/v and magnification calculations.",
+      "• Essential for solving mirror problems systematically, avoiding sign errors, and maintaining consistency across different optical scenarios and textbooks.",
     ],
   },
 
-  prism: {
-    id: "prism",
-    title: "Reflection & Refraction Prism",
+  figure1014: {
+    id: "figure1014",
+    title: "Focal Ray Refraction in Lenses",
     sketchfabUrl:
-      "https://sketchfab.com/3d-models/reflectionrefraction-prism-8f3a8a2168ed4a47ac8328e24e88147b",
+      "https://sketchfab.com/3d-models/figure-1014-538ce7929a8f4ef1a484e822acb571e1",
     embedUrl:
-      "https://sketchfab.com/models/8f3a8a2168ed4a47ac8328e24e88147b/embed",
+      "https://sketchfab.com/models/538ce7929a8f4ef1a484e822acb571e1/embed",
     description: [
-      "• A triangular prism demonstrating the fundamental optical phenomena of reflection and refraction when light passes through different transparent materials.",
-      "• Shows how white light separates into its component colors (dispersion) due to different wavelengths having different refractive indices in the prism material.",
-      "• Illustrates Snell's law of refraction, where light bends as it passes from one medium to another due to changes in light velocity through different materials.",
-      "• Demonstrates total internal reflection at critical angles, explaining how light can be completely reflected at the interface between two media.",
-      "• Essential for understanding optical devices like cameras, telescopes, periscopes, and fiber optic communications in modern technology.",
+      "• A fundamental lens ray diagram demonstrating how rays passing through or directed toward the principal focus emerge parallel to the principal axis.",
+      "• Shows that rays passing through the principal focus of a convex lens emerge parallel to the principal axis after refraction.",
+      "• Illustrates how rays directed toward the virtual principal focus of a concave lens also emerge parallel to the principal axis after refraction.",
+      "• Demonstrates the second principal ray rule used in lens ray diagram construction, complementing the parallel ray behavior.",
+      "• Essential for understanding the reversible nature of light paths in lenses and the systematic approach to predicting image formation in optical systems.",
     ],
   },
 
@@ -63,19 +63,19 @@ export const physicsModels = {
     ],
   },
 
-  figure102: {
-    id: "figure102",
-    title: "Concave and Convex Mirror",
+  figure1016: {
+    id: "figure1016",
+    title: "Image Formation by Convex Lens for Various Object Positions",
     sketchfabUrl:
-      "https://sketchfab.com/3d-models/figure-102-6393720a90f04af691d1437ea6b73a41",
+      "https://sketchfab.com/3d-models/figure-1016-8fb5ca6979c94941b67dce6273172734",
     embedUrl:
-      "https://sketchfab.com/models/6393720a90f04af691d1437ea6b73a41/embed",
+      "https://sketchfab.com/models/8fb5ca6979c94941b67dce6273172734/embed",
     description: [
-      "• A comprehensive mirror optics model demonstrating how concave and convex mirrors reflect light differently to form various types of images.",
-      "• Shows how concave mirrors converge light rays to form real or virtual images, depending on object distance from the focal point.",
-      "• Illustrates how convex mirrors diverge light rays to always form virtual, upright, and diminished images regardless of object position.",
-      "• Demonstrates practical applications including car rearview mirrors, telescope reflectors, dental mirrors, security mirrors, and solar concentrators.",
-      "• Essential for understanding geometric optics, image formation, focal length concepts, and the mirror equation used in optical calculations.",
+      "• A comprehensive demonstration showing how convex lenses form different types of images depending on object distance from the lens.",
+      "• Illustrates six different object positions: at infinity, beyond 2F, at 2F, between F and 2F, at F, and between F and lens.",
+      "• Shows how image characteristics (real/virtual, upright/inverted, magnified/diminished) change systematically with object position.",
+      "• Demonstrates practical applications including cameras, projectors, magnifying glasses, telescopes, and microscopes based on object placement.",
+      "• Essential for understanding lens formula calculations, magnification relationships, and the design principles of optical instruments using convex lenses.",
     ],
   },
 
@@ -175,19 +175,19 @@ export const physicsModels = {
     ],
   },
 
-  figure109: {
-    id: "figure109",
-    title: "The New Cartesian Sign Convention for Spherical Mirrors",
+  decoration: {
+    id: "decoration",
+    title: "Newton's Cradle",
     sketchfabUrl:
-      "https://sketchfab.com/3d-models/figure-109-f447aea9b1924d09b5bfa767ce9593cb",
+      "https://sketchfab.com/3d-models/decoration-5a0ea75cd5834fffaf1d8f72891d8df1",
     embedUrl:
-      "https://sketchfab.com/models/f447aea9b1924d09b5bfa767ce9593cb/embed",
+      "https://sketchfab.com/models/5a0ea75cd5834fffaf1d8f72891d8df1/embed",
     description: [
-      "• A fundamental reference system demonstrating the standardized sign conventions used in spherical mirror calculations and analysis.",
-      "• Shows how distances are measured: object distance (u), image distance (v), and focal length (f) with specific positive and negative assignments.",
-      "• Illustrates the pole as origin, with distances measured along the principal axis, and heights measured perpendicular to the principal axis.",
-      "• Demonstrates how this convention ensures consistency in mirror equations: 1/f = 1/u + 1/v and magnification calculations.",
-      "• Essential for solving mirror problems systematically, avoiding sign errors, and maintaining consistency across different optical scenarios and textbooks.",
+      "• A classic demonstration of conservation of momentum and energy using five identical pendulum balls suspended in a line.",
+      "• Shows how lifting and releasing one ball transfers momentum through the stationary balls, causing the ball on the opposite end to swing out.",
+      "• Illustrates Newton's laws of motion, particularly the conservation of momentum where momentum is transferred without the middle balls moving visibly.",
+      "• Demonstrates elastic collision principles where kinetic energy passes through the system with minimal loss during impact.",
+      "• Essential for understanding momentum transfer, collision physics, and how energy propagates through connected systems in mechanical physics.",
     ],
   },
 
@@ -239,19 +239,19 @@ export const physicsModels = {
     ],
   },
 
-  figure1014: {
-    id: "figure1014",
-    title: "Focal Ray Refraction in Lenses",
+  prism: {
+    id: "prism",
+    title: "Reflection & Refraction Prism",
     sketchfabUrl:
-      "https://sketchfab.com/3d-models/figure-1014-538ce7929a8f4ef1a484e822acb571e1",
+      "https://sketchfab.com/3d-models/reflectionrefraction-prism-8f3a8a2168ed4a47ac8328e24e88147b",
     embedUrl:
-      "https://sketchfab.com/models/538ce7929a8f4ef1a484e822acb571e1/embed",
+      "https://sketchfab.com/models/8f3a8a2168ed4a47ac8328e24e88147b/embed",
     description: [
-      "• A fundamental lens ray diagram demonstrating how rays passing through or directed toward the principal focus emerge parallel to the principal axis.",
-      "• Shows that rays passing through the principal focus of a convex lens emerge parallel to the principal axis after refraction.",
-      "• Illustrates how rays directed toward the virtual principal focus of a concave lens also emerge parallel to the principal axis after refraction.",
-      "• Demonstrates the second principal ray rule used in lens ray diagram construction, complementing the parallel ray behavior.",
-      "• Essential for understanding the reversible nature of light paths in lenses and the systematic approach to predicting image formation in optical systems.",
+      "• A triangular prism demonstrating the fundamental optical phenomena of reflection and refraction when light passes through different transparent materials.",
+      "• Shows how white light separates into its component colors (dispersion) due to different wavelengths having different refractive indices in the prism material.",
+      "• Illustrates Snell's law of refraction, where light bends as it passes from one medium to another due to changes in light velocity through different materials.",
+      "• Demonstrates total internal reflection at critical angles, explaining how light can be completely reflected at the interface between two media.",
+      "• Essential for understanding optical devices like cameras, telescopes, periscopes, and fiber optic communications in modern technology.",
     ],
   },
 
@@ -271,19 +271,19 @@ export const physicsModels = {
     ],
   },
 
-  figure1016: {
-    id: "figure1016",
-    title: "Image Formation by Convex Lens for Various Object Positions",
+  figure102: {
+    id: "figure102",
+    title: "Concave and Convex Mirror",
     sketchfabUrl:
-      "https://sketchfab.com/3d-models/figure-1016-8fb5ca6979c94941b67dce6273172734",
+      "https://sketchfab.com/3d-models/figure-102-6393720a90f04af691d1437ea6b73a41",
     embedUrl:
-      "https://sketchfab.com/models/8fb5ca6979c94941b67dce6273172734/embed",
+      "https://sketchfab.com/models/6393720a90f04af691d1437ea6b73a41/embed",
     description: [
-      "• A comprehensive demonstration showing how convex lenses form different types of images depending on object distance from the lens.",
-      "• Illustrates six different object positions: at infinity, beyond 2F, at 2F, between F and 2F, at F, and between F and lens.",
-      "• Shows how image characteristics (real/virtual, upright/inverted, magnified/diminished) change systematically with object position.",
-      "• Demonstrates practical applications including cameras, projectors, magnifying glasses, telescopes, and microscopes based on object placement.",
-      "• Essential for understanding lens formula calculations, magnification relationships, and the design principles of optical instruments using convex lenses.",
+      "• A comprehensive mirror optics model demonstrating how concave and convex mirrors reflect light differently to form various types of images.",
+      "• Shows how concave mirrors converge light rays to form real or virtual images, depending on object distance from the focal point.",
+      "• Illustrates how convex mirrors diverge light rays to always form virtual, upright, and diminished images regardless of object position.",
+      "• Demonstrates practical applications including car rearview mirrors, telescope reflectors, dental mirrors, security mirrors, and solar concentrators.",
+      "• Essential for understanding geometric optics, image formation, focal length concepts, and the mirror equation used in optical calculations.",
     ],
   },
 

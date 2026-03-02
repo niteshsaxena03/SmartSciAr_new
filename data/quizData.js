@@ -3,6 +3,191 @@
 export const quizData = {
   // Physics Quizzes
   physics: {
+    figure109: {
+      questions: [
+        {
+          id: 1,
+          question:
+            "In the new Cartesian sign convention, all distances are measured from which point?",
+          options: [
+            "The focus of the mirror",
+            "The center of curvature",
+            "The pole of the mirror",
+            "The object position",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 2,
+          question:
+            "According to the new Cartesian sign convention, distances measured in the direction of the incident ray are taken as:",
+          options: ["Positive", "Negative", "Zero", "Depends on the mirror type"],
+          correctAnswer: 0,
+        },
+        {
+          id: 3,
+          question:
+            "In the new Cartesian sign convention, the focal length of a concave mirror is:",
+          options: [
+            "Positive",
+            "Negative",
+            "Can be either positive or negative",
+            "Always zero",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question:
+            "Which mirror formula uses the sign convention where u, v, and f follow Cartesian coordinate rules?",
+          options: [
+            "1/f = 1/v + 1/u",
+            "1/f = 1/v - 1/u",
+            "f = u + v",
+            "f = u × v / (u + v)",
+          ],
+          correctAnswer: 0,
+        },
+        {
+          id: 5,
+          question:
+            "In the new Cartesian sign convention, heights measured upward from the principal axis are:",
+          options: [
+            "Negative",
+            "Positive",
+            "Zero",
+            "Depends on the image type",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
+    figure1014: {
+      questions: [
+        {
+          id: 1,
+          question:
+            "What happens to a ray of light passing through the principal focus of a convex lens?",
+          options: [
+            "It diverges away from the axis",
+            "It emerges parallel to the principal axis",
+            "It passes straight through without bending",
+            "It reflects back through the focus",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question:
+            "Which rule does the focal ray demonstrate in lens ray diagrams?",
+          options: [
+            "The first principal ray rule",
+            "The second principal ray rule",
+            "The third principal ray rule",
+            "The law of total internal reflection",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question:
+            "For a concave lens, a ray directed toward the virtual principal focus on the other side will emerge:",
+          options: [
+            "Converging toward the axis",
+            "Parallel to the principal axis",
+            "Diverging away from the lens",
+            "At 90 degrees to the principal axis",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question:
+            "The focal ray behavior in lenses is based on which fundamental property of light?",
+          options: [
+            "Diffraction",
+            "Interference",
+            "Reversibility of light path",
+            "Polarization",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 5,
+          question:
+            "How many principal rays are typically used to construct a ray diagram for image formation by a lens?",
+          options: ["1", "2", "3", "4"],
+          correctAnswer: 2,
+        },
+      ],
+    },
+
+    figure1016: {
+      questions: [
+        {
+          id: 1,
+          question:
+            "When an object is placed at infinity in front of a convex lens, where is the image formed?",
+          options: [
+            "At 2F on the other side",
+            "At the focus (F) on the other side",
+            "Between F and 2F",
+            "At the optical center",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question:
+            "When an object is placed at 2F of a convex lens, the image formed is:",
+          options: [
+            "Virtual, erect, and magnified",
+            "Real, inverted, and same size as the object",
+            "Real, inverted, and diminished",
+            "Virtual, erect, and diminished",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question:
+            "What type of image is formed when an object is placed between the focus and the optical center of a convex lens?",
+          options: [
+            "Real, inverted, and magnified",
+            "Real, inverted, and diminished",
+            "Virtual, erect, and magnified",
+            "No image is formed",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 4,
+          question:
+            "When the object is placed at the focus (F) of a convex lens, the image is formed:",
+          options: [
+            "At the focus on the other side",
+            "At 2F on the other side",
+            "At infinity",
+            "At the optical center",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 5,
+          question:
+            "Which device uses a convex lens with the object placed between F and 2F to form a magnified real image?",
+          options: [
+            "Camera",
+            "Magnifying glass",
+            "Projector",
+            "Telescope eyepiece",
+          ],
+          correctAnswer: 2,
+        },
+      ],
+    },
+
     decoration: {
       // Newton's Cradle
       questions: [

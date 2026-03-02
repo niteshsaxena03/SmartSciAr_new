@@ -13,13 +13,13 @@ import { LinearGradient } from "expo-linear-gradient";
 export default function PhysicsScreen({ navigation }) {
   const physicsTopics = [
     {
-      title: "Newton's Cradle",
-      modelId: "decoration",
+      title: "The New Cartesian Sign Convention for Spherical Mirrors",
+      modelId: "figure109",
       hasModel: true,
     },
     {
-      title: "Reflection & Refraction Prism",
-      modelId: "prism",
+      title: "Focal Ray Refraction in Lenses",
+      modelId: "figure1014",
       hasModel: true,
     },
     {
@@ -33,8 +33,8 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Concave and Convex Mirror",
-      modelId: "figure102",
+      title: "Image Formation by Convex Lens for Various Object Positions",
+      modelId: "figure1016",
       hasModel: true,
     },
     {
@@ -68,8 +68,8 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "The New Cartesian Sign Convention for Spherical Mirrors",
-      modelId: "figure109",
+      title: "Newton's Cradle",
+      modelId: "decoration",
       hasModel: true,
     },
     {
@@ -88,8 +88,8 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Focal Ray Refraction in Lenses",
-      modelId: "figure1014",
+      title: "Reflection & Refraction Prism",
+      modelId: "prism",
       hasModel: true,
     },
     {
@@ -98,8 +98,8 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Image Formation by Convex Lens for Various Object Positions",
-      modelId: "figure1016",
+      title: "Concave and Convex Mirror",
+      modelId: "figure102",
       hasModel: true,
     },
     {

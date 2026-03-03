@@ -58,11 +58,11 @@ export default function LoginScreen({ navigation }) {
 
   return (
     <LinearGradient
-      colors={["#0D1322", "#0A1B36", "#042D45"]}
+      colors={["#FFF8E7", "#FFF0D4", "#F5F0E8"]}
       style={styles.container}
     >
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar style="light" />
+        <StatusBar style="dark" />
 
         {/* Back Button */}
         <TouchableOpacity
@@ -95,7 +95,7 @@ export default function LoginScreen({ navigation }) {
                 <TextInput
                   style={styles.input}
                   placeholder="Enter your email"
-                  placeholderTextColor="rgba(224, 225, 221, 0.5)"
+                  placeholderTextColor="#B8A090"
                   value={email}
                   onChangeText={setEmail}
                   keyboardType="email-address"
@@ -110,7 +110,7 @@ export default function LoginScreen({ navigation }) {
                 <TextInput
                   style={styles.input}
                   placeholder="Enter your password"
-                  placeholderTextColor="rgba(224, 225, 221, 0.5)"
+                  placeholderTextColor="#B8A090"
                   value={password}
                   onChangeText={setPassword}
                   secureTextEntry
@@ -135,7 +135,7 @@ export default function LoginScreen({ navigation }) {
                 activeOpacity={0.8}
               >
                 <LinearGradient
-                  colors={["#4895EF", "#4361EE"]}
+                  colors={["#FF9A56", "#FF6B6B"]}
                   start={{ x: 0, y: 0 }}
                   end={{ x: 1, y: 1 }}
                   style={styles.loginButtonGradient}
@@ -179,15 +179,13 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: "rgba(178, 207, 249, 0.9)",
+    backgroundColor: "rgba(0,0,0,0.06)",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 10,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.2)",
   },
   backButtonText: {
-    color: "#E0E1DD",
+    color: "#5A4E3C",
     top: -2,
     fontSize: 24,
     fontWeight: "bold",
@@ -207,17 +205,16 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 36,
     fontWeight: "800",
-    color: "#E0E1DD",
+    color: "#2D2015",
     textAlign: "center",
     letterSpacing: 1.2,
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
-    color: "#ffffffff",
+    color: "#8B7355",
     textAlign: "center",
     fontWeight: "500",
-    opacity: 0.8,
   },
   formContainer: {
     width: "100%",
@@ -228,25 +225,25 @@ const styles = StyleSheet.create({
   inputLabel: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#E0E1DD",
+    color: "#5A4E3C",
     marginBottom: 8,
     marginLeft: 4,
   },
   input: {
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "#FFFFFF",
     borderRadius: 15,
     padding: 16,
     fontSize: 16,
-    color: "#E0E1DD",
+    color: "#2D2015",
     borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.2)",
+    borderColor: "rgba(0,0,0,0.1)",
   },
   forgotPasswordContainer: {
     alignSelf: "flex-end",
     marginBottom: 30,
   },
   forgotPasswordText: {
-    color: "#4895EF",
+    color: "#FF9A56",
     fontSize: 14,
     fontWeight: "600",
   },
@@ -276,14 +273,13 @@ const styles = StyleSheet.create({
   dividerLine: {
     flex: 1,
     height: 1,
-    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    backgroundColor: "rgba(0,0,0,0.1)",
   },
   dividerText: {
-    color: "#E0E1DD",
+    color: "#8B7355",
     fontSize: 14,
     fontWeight: "600",
     marginHorizontal: 15,
-    opacity: 0.6,
   },
   signupContainer: {
     flexDirection: "row",
@@ -291,12 +287,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   signupText: {
-    color: "#E0E1DD",
+    color: "#8B7355",
     fontSize: 15,
-    opacity: 0.8,
   },
   signupLink: {
-    color: "#4895EF",
+    color: "#FF9A56",
     fontSize: 15,
     fontWeight: "bold",
   },

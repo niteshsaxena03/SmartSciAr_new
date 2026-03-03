@@ -3,6 +3,191 @@
 export const quizData = {
   // Physics Quizzes
   physics: {
+    figure109: {
+      questions: [
+        {
+          id: 1,
+          question:
+            "In the new Cartesian sign convention, all distances are measured from which point?",
+          options: [
+            "The focus of the mirror",
+            "The center of curvature",
+            "The pole of the mirror",
+            "The object position",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 2,
+          question:
+            "According to the new Cartesian sign convention, distances measured in the direction of the incident ray are taken as:",
+          options: ["Positive", "Negative", "Zero", "Depends on the mirror type"],
+          correctAnswer: 0,
+        },
+        {
+          id: 3,
+          question:
+            "In the new Cartesian sign convention, the focal length of a concave mirror is:",
+          options: [
+            "Positive",
+            "Negative",
+            "Can be either positive or negative",
+            "Always zero",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question:
+            "Which mirror formula uses the sign convention where u, v, and f follow Cartesian coordinate rules?",
+          options: [
+            "1/f = 1/v + 1/u",
+            "1/f = 1/v - 1/u",
+            "f = u + v",
+            "f = u × v / (u + v)",
+          ],
+          correctAnswer: 0,
+        },
+        {
+          id: 5,
+          question:
+            "In the new Cartesian sign convention, heights measured upward from the principal axis are:",
+          options: [
+            "Negative",
+            "Positive",
+            "Zero",
+            "Depends on the image type",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
+    figure1014: {
+      questions: [
+        {
+          id: 1,
+          question:
+            "What happens to a ray of light passing through the principal focus of a convex lens?",
+          options: [
+            "It diverges away from the axis",
+            "It emerges parallel to the principal axis",
+            "It passes straight through without bending",
+            "It reflects back through the focus",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question:
+            "Which rule does the focal ray demonstrate in lens ray diagrams?",
+          options: [
+            "The first principal ray rule",
+            "The second principal ray rule",
+            "The third principal ray rule",
+            "The law of total internal reflection",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question:
+            "For a concave lens, a ray directed toward the virtual principal focus on the other side will emerge:",
+          options: [
+            "Converging toward the axis",
+            "Parallel to the principal axis",
+            "Diverging away from the lens",
+            "At 90 degrees to the principal axis",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question:
+            "The focal ray behavior in lenses is based on which fundamental property of light?",
+          options: [
+            "Diffraction",
+            "Interference",
+            "Reversibility of light path",
+            "Polarization",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 5,
+          question:
+            "How many principal rays are typically used to construct a ray diagram for image formation by a lens?",
+          options: ["1", "2", "3", "4"],
+          correctAnswer: 2,
+        },
+      ],
+    },
+
+    figure1016: {
+      questions: [
+        {
+          id: 1,
+          question:
+            "When an object is placed at infinity in front of a convex lens, where is the image formed?",
+          options: [
+            "At 2F on the other side",
+            "At the focus (F) on the other side",
+            "Between F and 2F",
+            "At the optical center",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question:
+            "When an object is placed at 2F of a convex lens, the image formed is:",
+          options: [
+            "Virtual, erect, and magnified",
+            "Real, inverted, and same size as the object",
+            "Real, inverted, and diminished",
+            "Virtual, erect, and diminished",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question:
+            "What type of image is formed when an object is placed between the focus and the optical center of a convex lens?",
+          options: [
+            "Real, inverted, and magnified",
+            "Real, inverted, and diminished",
+            "Virtual, erect, and magnified",
+            "No image is formed",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 4,
+          question:
+            "When the object is placed at the focus (F) of a convex lens, the image is formed:",
+          options: [
+            "At the focus on the other side",
+            "At 2F on the other side",
+            "At infinity",
+            "At the optical center",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 5,
+          question:
+            "Which device uses a convex lens with the object placed between F and 2F to form a magnified real image?",
+          options: [
+            "Camera",
+            "Magnifying glass",
+            "Projector",
+            "Telescope eyepiece",
+          ],
+          correctAnswer: 2,
+        },
+      ],
+    },
+
     decoration: {
       // Newton's Cradle
       questions: [
@@ -310,6 +495,61 @@ export const quizData = {
 
   // Chemistry Quizzes
   chemistry: {
+    waterBallStick: {
+      questions: [
+        {
+          id: 1,
+          question: "What is the bond angle in a water molecule?",
+          options: ["90°", "104.5°", "109.5°", "180°"],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "Why does the water molecule have a bent shape?",
+          options: [
+            "Due to single bonds only",
+            "Due to two lone pairs on oxygen repelling bonding pairs",
+            "Due to hydrogen bonding",
+            "Due to equal electronegativity",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "What does the ball-and-stick model represent?",
+          options: [
+            "Only bond angles",
+            "Atoms as balls and bonds as sticks showing geometry",
+            "Electron cloud distribution",
+            "Nuclear structure only",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "What creates the dipole moment in water?",
+          options: [
+            "Equal charge distribution",
+            "The bent shape and difference in electronegativity",
+            "Metallic bonding",
+            "Hydrogen atoms being larger than oxygen",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "What is the electron geometry around the oxygen atom in water?",
+          options: [
+            "Linear",
+            "Trigonal planar",
+            "Tetrahedral",
+            "Octahedral",
+          ],
+          correctAnswer: 2,
+        },
+      ],
+    },
+
     atom: {
       // Atomic Structure
       questions: [
@@ -360,6 +600,146 @@ export const quizData = {
             "In energy levels/shells around nucleus",
             "Between protons and neutrons",
             "Outside the atom",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
+    cyclohexane: {
+      questions: [
+        {
+          id: 1,
+          question: "What is the molecular formula of cyclohexane?",
+          options: ["C₆H₆", "C₆H₁₂", "C₆H₁₀", "C₆H₁₄"],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "Why does cyclohexane adopt a chair conformation?",
+          options: [
+            "To increase ring strain",
+            "To minimize steric strain and achieve optimal bond angles",
+            "Because it is aromatic",
+            "Due to double bonds in the ring",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "What are the two types of hydrogen positions in chair cyclohexane?",
+          options: [
+            "Cis and trans",
+            "Axial and equatorial",
+            "Alpha and beta",
+            "Primary and secondary",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "Which position is generally more stable for substituents on cyclohexane?",
+          options: [
+            "Axial",
+            "Equatorial",
+            "Both are equally stable",
+            "Neither is stable",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "Cyclohexane is an example of which type of hydrocarbon?",
+          options: [
+            "Aromatic",
+            "Cycloalkane (saturated cyclic)",
+            "Alkene",
+            "Alkyne",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
+    orbitalF: {
+      questions: [
+        {
+          id: 1,
+          question: "What is the minimum principal quantum number (n) for f orbitals to exist?",
+          options: ["n = 1", "n = 2", "n = 3", "n = 4"],
+          correctAnswer: 3,
+        },
+        {
+          id: 2,
+          question: "How many f orbitals are there in a given subshell?",
+          options: ["3", "5", "7", "9"],
+          correctAnswer: 2,
+        },
+        {
+          id: 3,
+          question: "What is the maximum number of electrons f orbitals can hold?",
+          options: ["6", "10", "14", "18"],
+          correctAnswer: 2,
+        },
+        {
+          id: 4,
+          question: "Which block of elements in the periodic table involves f orbitals?",
+          options: [
+            "s-block",
+            "p-block",
+            "d-block",
+            "f-block (lanthanides and actinides)",
+          ],
+          correctAnswer: 3,
+        },
+        {
+          id: 5,
+          question: "What is the azimuthal quantum number (l) for f orbitals?",
+          options: ["0", "1", "2", "3"],
+          correctAnswer: 3,
+        },
+      ],
+    },
+
+    orbitalDxz: {
+      questions: [
+        {
+          id: 1,
+          question: "How many d orbitals exist in a given subshell?",
+          options: ["3", "5", "7", "9"],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "What is the azimuthal quantum number (l) for d orbitals?",
+          options: ["0", "1", "2", "3"],
+          correctAnswer: 2,
+        },
+        {
+          id: 3,
+          question: "What causes d orbital splitting in transition metal complexes?",
+          options: [
+            "Temperature changes",
+            "Interaction with ligands (crystal field effect)",
+            "Nuclear decay",
+            "Gravitational forces",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "What is the maximum number of electrons all five d orbitals can hold?",
+          options: ["6", "8", "10", "14"],
+          correctAnswer: 2,
+        },
+        {
+          id: 5,
+          question: "The Dxz orbital has lobes oriented along which axes?",
+          options: [
+            "x and y axes",
+            "x and z axes",
+            "y and z axes",
+            "Along all three axes",
           ],
           correctAnswer: 1,
         },
@@ -593,6 +973,241 @@ export const quizData = {
 
   // Biology Quizzes
   biology: {
+    neuron: {
+      questions: [
+        {
+          id: 1,
+          question: "What part of the neuron receives signals from other neurons?",
+          options: ["Axon", "Dendrites", "Cell body", "Myelin sheath"],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "What is the function of the axon?",
+          options: [
+            "Receive incoming signals",
+            "Transmit electrical impulses away from the cell body",
+            "Produce neurotransmitters only",
+            "Store genetic material",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "How do neurons communicate with each other?",
+          options: [
+            "Direct physical contact",
+            "Through neurotransmitters at synapses",
+            "Through blood vessels",
+            "Through hormones only",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "What is the gap between two neurons called?",
+          options: [
+            "Axon terminal",
+            "Synapse",
+            "Node of Ranvier",
+            "Dendrite junction",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "What does the myelin sheath do?",
+          options: [
+            "Produces neurotransmitters",
+            "Insulates the axon and speeds up signal transmission",
+            "Receives signals from other neurons",
+            "Stores nutrients for the neuron",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
+    humanBrain: {
+      questions: [
+        {
+          id: 1,
+          question: "Which part of the brain is responsible for decision-making and reasoning?",
+          options: [
+            "Cerebellum",
+            "Frontal lobe",
+            "Brainstem",
+            "Occipital lobe",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "What does the cerebellum control?",
+          options: [
+            "Memory and emotions",
+            "Balance and coordination",
+            "Vision and hearing",
+            "Breathing and heart rate",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "Which brain region controls involuntary functions like breathing?",
+          options: [
+            "Cerebrum",
+            "Cerebellum",
+            "Brainstem",
+            "Temporal lobe",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 4,
+          question: "Which lobe of the brain processes visual information?",
+          options: [
+            "Frontal lobe",
+            "Parietal lobe",
+            "Temporal lobe",
+            "Occipital lobe",
+          ],
+          correctAnswer: 3,
+        },
+        {
+          id: 5,
+          question: "What is the largest part of the human brain?",
+          options: [
+            "Cerebellum",
+            "Brainstem",
+            "Cerebrum",
+            "Hypothalamus",
+          ],
+          correctAnswer: 2,
+        },
+      ],
+    },
+
+    digestiveSystem: {
+      questions: [
+        {
+          id: 1,
+          question: "Where does most nutrient absorption take place?",
+          options: [
+            "Stomach",
+            "Small intestine",
+            "Large intestine",
+            "Esophagus",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "What is the role of villi in the small intestine?",
+          options: [
+            "Produce digestive enzymes",
+            "Increase surface area for absorption",
+            "Store bile",
+            "Break down fats mechanically",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 3,
+          question: "Which organ produces bile to help digest fats?",
+          options: [
+            "Stomach",
+            "Pancreas",
+            "Liver",
+            "Small intestine",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 4,
+          question: "What type of digestion occurs when you chew food?",
+          options: [
+            "Chemical digestion",
+            "Mechanical digestion",
+            "Enzymatic digestion",
+            "Bacterial digestion",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "What does the stomach use to break down food chemically?",
+          options: [
+            "Bile",
+            "Hydrochloric acid and pepsin",
+            "Insulin",
+            "Saliva",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
+    heartLungs: {
+      questions: [
+        {
+          id: 1,
+          question: "What is the primary function of the lungs?",
+          options: [
+            "Pumping blood",
+            "Gas exchange (oxygen in, carbon dioxide out)",
+            "Filtering toxins",
+            "Producing hormones",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 2,
+          question: "Where does gas exchange occur in the lungs?",
+          options: [
+            "Bronchi",
+            "Trachea",
+            "Alveoli",
+            "Pharynx",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          id: 3,
+          question: "What type of blood does the pulmonary artery carry?",
+          options: [
+            "Oxygenated blood",
+            "Deoxygenated blood",
+            "Mixed blood",
+            "Plasma only",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 4,
+          question: "Which side of the heart pumps blood to the lungs?",
+          options: [
+            "Left side",
+            "Right side",
+            "Both sides equally",
+            "Neither, the lungs pump their own blood",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          id: 5,
+          question: "What is pulmonary circulation?",
+          options: [
+            "Blood flow from heart to body and back",
+            "Blood flow between heart and lungs for gas exchange",
+            "Blood flow within the brain",
+            "Blood flow through the digestive system",
+          ],
+          correctAnswer: 1,
+        },
+      ],
+    },
+
     cellModel: {
       // Cell Model - Basic Structure
       questions: [

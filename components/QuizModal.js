@@ -85,11 +85,7 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
         onRequestClose={onClose}
       >
         <View style={styles.modalOverlay}>
-          <LinearGradient
-            colors={["#0D1322", "#0A1B36", "#042D45"]}
-            style={styles.modalContent}
-          >
-            {/* Close Button */}
+          <View style={styles.modalContent}>
             <TouchableOpacity style={styles.closeButton} onPress={onClose}>
               <Text style={styles.closeButtonText}>✕</Text>
             </TouchableOpacity>
@@ -101,10 +97,9 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
               <Text style={styles.resultsTitle}>Quiz Complete!</Text>
               <Text style={styles.modelTitle}>{modelTitle}</Text>
 
-              {/* Score Display */}
               <View style={styles.scoreCard}>
                 <LinearGradient
-                  colors={["#4895EF", "#4361EE"]}
+                  colors={["#FF9A56", "#FF6B6B"]}
                   style={styles.scoreGradient}
                 >
                   <Text style={styles.scoreMessage}>{getScoreMessage()}</Text>
@@ -117,7 +112,6 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
                 </LinearGradient>
               </View>
 
-              {/* Answer Review */}
               <View style={styles.reviewSection}>
                 <Text style={styles.reviewTitle}>Review Answers</Text>
                 {quizData.questions.map((question, index) => (
@@ -134,7 +128,14 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
                             : styles.incorrectBadge,
                         ]}
                       >
-                        <Text style={styles.reviewBadgeText}>
+                        <Text
+                          style={[
+                            styles.reviewBadgeText,
+                            answers[index].isCorrect
+                              ? styles.correctBadgeText
+                              : styles.incorrectBadgeText,
+                          ]}
+                        >
                           {answers[index].isCorrect ? "✓ Correct" : "✗ Wrong"}
                         </Text>
                       </View>
@@ -152,14 +153,13 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
                 ))}
               </View>
 
-              {/* Action Buttons */}
               <View style={styles.resultsButtonGroup}>
                 <TouchableOpacity
                   style={styles.retryButton}
                   onPress={handleRetry}
                 >
                   <LinearGradient
-                    colors={["#4895EF", "#4361EE"]}
+                    colors={["#FF9A56", "#FF6B6B"]}
                     style={styles.buttonGradient}
                   >
                     <Text style={styles.buttonText}>Retry Quiz</Text>
@@ -171,7 +171,7 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
                 </TouchableOpacity>
               </View>
             </ScrollView>
-          </LinearGradient>
+          </View>
         </View>
       </Modal>
     );
@@ -188,11 +188,7 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
       onRequestClose={onClose}
     >
       <View style={styles.modalOverlay}>
-        <LinearGradient
-          colors={["#0D1322", "#0A1B36", "#042D45"]}
-          style={styles.modalContent}
-        >
-          {/* Close Button */}
+        <View style={styles.modalContent}>
           <TouchableOpacity style={styles.closeButton} onPress={onClose}>
             <Text style={styles.closeButtonText}>✕</Text>
           </TouchableOpacity>
@@ -201,11 +197,9 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
             showsVerticalScrollIndicator={false}
             contentContainerStyle={styles.quizContainer}
           >
-            {/* Header */}
             <Text style={styles.quizTitle}>Quiz</Text>
             <Text style={styles.modelTitle}>{modelTitle}</Text>
 
-            {/* Progress */}
             <View style={styles.progressContainer}>
               <View style={styles.progressBar}>
                 <View
@@ -224,7 +218,6 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
               </Text>
             </View>
 
-            {/* Question Card */}
             <View style={styles.questionCard}>
               <Text style={styles.questionNumber}>
                 Question {currentQuestion + 1}
@@ -232,7 +225,6 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
               <Text style={styles.questionText}>{question.question}</Text>
             </View>
 
-            {/* Options */}
             <View style={styles.optionsContainer}>
               {question.options.map((option, index) => (
                 <TouchableOpacity
@@ -268,7 +260,6 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
               ))}
             </View>
 
-            {/* Next Button */}
             <TouchableOpacity
               style={[styles.nextButton, !selectedAnswer && styles.nextButtonDisabled]}
               onPress={handleNext}
@@ -278,8 +269,8 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
               <LinearGradient
                 colors={
                   selectedAnswer !== null
-                    ? ["#1FCFA6", "#19A485"]
-                    : ["#555", "#444"]
+                    ? ["#FF9A56", "#FF6B6B"]
+                    : ["#CCCCCC", "#BBBBBB"]
                 }
                 style={styles.buttonGradient}
               >
@@ -291,7 +282,7 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
               </LinearGradient>
             </TouchableOpacity>
           </ScrollView>
-        </LinearGradient>
+        </View>
       </View>
     </Modal>
   );
@@ -300,33 +291,36 @@ export default function QuizModal({ visible, onClose, quizData, modelTitle }) {
 const styles = StyleSheet.create({
   modalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.9)",
+    backgroundColor: "#F5F0E8",
     justifyContent: "center",
     alignItems: "center",
   },
   modalContent: {
-    width: width * 0.95,
-    maxHeight: height * 0.9,
-    borderRadius: 20,
-    padding: 20,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.1)",
+    width: width * 0.93,
+    maxHeight: height * 0.88,
+    borderRadius: 24,
+    padding: 22,
+    backgroundColor: "#FFF8F0",
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowRadius: 20,
+    elevation: 10,
   },
   closeButton: {
     position: "absolute",
-    top: 15,
-    right: 15,
+    top: 14,
+    right: 14,
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "rgba(0, 0, 0, 0.06)",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 10,
   },
   closeButtonText: {
-    color: "#E0E1DD",
-    fontSize: 20,
+    color: "#8B7355",
+    fontSize: 18,
     fontWeight: "bold",
   },
   quizContainer: {
@@ -334,75 +328,78 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   quizTitle: {
-    fontSize: 32,
-    fontWeight: "800",
-    color: "#E0E1DD",
+    fontSize: 30,
+    fontWeight: "900",
+    color: "#2D2015",
     textAlign: "center",
-    marginBottom: 8,
-    letterSpacing: 1.2,
+    marginBottom: 6,
   },
   modelTitle: {
-    fontSize: 16,
-    color: "#4CC9F0",
+    fontSize: 15,
+    color: "#FF9A56",
     textAlign: "center",
-    marginBottom: 24,
-    fontWeight: "600",
+    marginBottom: 22,
+    fontWeight: "700",
   },
   progressContainer: {
-    marginBottom: 24,
+    marginBottom: 22,
   },
   progressBar: {
     height: 8,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "rgba(0, 0, 0, 0.06)",
     borderRadius: 4,
     overflow: "hidden",
     marginBottom: 8,
   },
   progressFill: {
     height: "100%",
-    backgroundColor: "#4895EF",
+    backgroundColor: "#FF9A56",
     borderRadius: 4,
   },
   progressText: {
-    fontSize: 14,
-    color: "#E0E1DD",
+    fontSize: 13,
+    color: "#8B7355",
     textAlign: "center",
-    opacity: 0.8,
+    fontWeight: "600",
   },
   questionCard: {
-    backgroundColor: "rgba(72, 149, 239, 0.1)",
-    borderRadius: 15,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 18,
     padding: 20,
-    marginBottom: 24,
+    marginBottom: 22,
     borderWidth: 1,
-    borderColor: "rgba(72, 149, 239, 0.3)",
+    borderColor: "rgba(255, 154, 86, 0.2)",
+    shadowColor: "#FF9A56",
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+    elevation: 2,
   },
   questionNumber: {
-    fontSize: 14,
-    color: "#4CC9F0",
-    fontWeight: "600",
-    marginBottom: 12,
+    fontSize: 13,
+    color: "#FF9A56",
+    fontWeight: "700",
+    marginBottom: 10,
   },
   questionText: {
-    fontSize: 18,
-    color: "#E0E1DD",
+    fontSize: 17,
+    color: "#2D2015",
     fontWeight: "600",
-    lineHeight: 26,
+    lineHeight: 25,
   },
   optionsContainer: {
-    marginBottom: 24,
+    marginBottom: 22,
   },
   optionButton: {
-    backgroundColor: "rgba(255, 255, 255, 0.05)",
-    borderRadius: 12,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 14,
     padding: 16,
-    marginBottom: 12,
+    marginBottom: 10,
     borderWidth: 2,
-    borderColor: "rgba(255, 255, 255, 0.1)",
+    borderColor: "rgba(0, 0, 0, 0.07)",
   },
   optionButtonSelected: {
-    backgroundColor: "rgba(72, 149, 239, 0.2)",
-    borderColor: "#4895EF",
+    backgroundColor: "#FFF3E8",
+    borderColor: "#FF9A56",
   },
   optionContent: {
     flexDirection: "row",
@@ -413,31 +410,32 @@ const styles = StyleSheet.create({
     height: 24,
     borderRadius: 12,
     borderWidth: 2,
-    borderColor: "rgba(255, 255, 255, 0.3)",
+    borderColor: "rgba(0, 0, 0, 0.15)",
     marginRight: 12,
     justifyContent: "center",
     alignItems: "center",
   },
   optionRadioSelected: {
-    borderColor: "#4895EF",
+    borderColor: "#FF9A56",
   },
   optionRadioInner: {
     width: 12,
     height: 12,
     borderRadius: 6,
-    backgroundColor: "#4895EF",
+    backgroundColor: "#FF9A56",
   },
   optionText: {
     flex: 1,
-    fontSize: 16,
-    color: "#E0E1DD",
-    lineHeight: 22,
+    fontSize: 15,
+    color: "#4A3D2E",
+    lineHeight: 21,
   },
   optionTextSelected: {
-    fontWeight: "600",
+    fontWeight: "700",
+    color: "#2D2015",
   },
   nextButton: {
-    borderRadius: 15,
+    borderRadius: 16,
     overflow: "hidden",
   },
   nextButtonDisabled: {
@@ -447,78 +445,78 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     alignItems: "center",
     justifyContent: "center",
+    borderRadius: 16,
   },
   buttonText: {
     color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "bold",
+    fontSize: 17,
+    fontWeight: "800",
   },
-  // Results Styles
   resultsContainer: {
     paddingTop: 20,
     paddingBottom: 20,
   },
   resultsTitle: {
-    fontSize: 32,
-    fontWeight: "800",
-    color: "#E0E1DD",
+    fontSize: 30,
+    fontWeight: "900",
+    color: "#2D2015",
     textAlign: "center",
-    marginBottom: 8,
-    letterSpacing: 1.2,
+    marginBottom: 6,
   },
   scoreCard: {
-    marginBottom: 30,
-    borderRadius: 20,
+    marginBottom: 26,
+    borderRadius: 22,
     overflow: "hidden",
   },
   scoreGradient: {
-    padding: 30,
+    padding: 28,
     alignItems: "center",
+    borderRadius: 22,
   },
   scoreMessage: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: "700",
     color: "#FFFFFF",
-    marginBottom: 16,
+    marginBottom: 14,
   },
   scoreText: {
-    fontSize: 48,
-    fontWeight: "800",
+    fontSize: 46,
+    fontWeight: "900",
     color: "#FFFFFF",
-    marginBottom: 8,
+    marginBottom: 6,
   },
   scorePercentage: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "600",
     color: "rgba(255, 255, 255, 0.9)",
   },
   reviewSection: {
-    marginBottom: 24,
+    marginBottom: 22,
   },
   reviewTitle: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#E0E1DD",
-    marginBottom: 16,
+    fontSize: 19,
+    fontWeight: "800",
+    color: "#2D2015",
+    marginBottom: 14,
   },
   reviewCard: {
-    backgroundColor: "rgba(255, 255, 255, 0.05)",
-    borderRadius: 12,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 14,
     padding: 16,
-    marginBottom: 12,
+    marginBottom: 10,
     borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.1)",
+    borderColor: "rgba(0, 0, 0, 0.06)",
   },
   reviewHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 12,
+    marginBottom: 10,
   },
   reviewQuestionNumber: {
     fontSize: 14,
-    fontWeight: "700",
-    color: "#4CC9F0",
+    fontWeight: "800",
+    color: "#FF9A56",
   },
   reviewBadge: {
     paddingHorizontal: 12,
@@ -526,51 +524,58 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   correctBadge: {
-    backgroundColor: "rgba(31, 207, 166, 0.2)",
+    backgroundColor: "#E8F5E9",
   },
   incorrectBadge: {
-    backgroundColor: "rgba(255, 107, 107, 0.2)",
+    backgroundColor: "#FFEBEE",
   },
   reviewBadgeText: {
     fontSize: 12,
-    fontWeight: "600",
-    color: "#E0E1DD",
+    fontWeight: "700",
+  },
+  correctBadgeText: {
+    color: "#2E7D32",
+  },
+  incorrectBadgeText: {
+    color: "#C62828",
   },
   reviewQuestion: {
-    fontSize: 15,
-    color: "#E0E1DD",
+    fontSize: 14,
+    color: "#4A3D2E",
     marginBottom: 8,
     fontWeight: "500",
+    lineHeight: 20,
   },
   reviewCorrectAnswer: {
-    fontSize: 14,
-    color: "#1FCFA6",
-    fontWeight: "600",
+    fontSize: 13,
+    color: "#2E7D32",
+    fontWeight: "700",
   },
   reviewYourAnswer: {
-    fontSize: 14,
-    color: "#FF6B6B",
+    fontSize: 13,
+    color: "#C62828",
     marginTop: 4,
+    fontWeight: "500",
   },
   resultsButtonGroup: {
-    gap: 12,
+    gap: 10,
   },
   retryButton: {
-    borderRadius: 15,
+    borderRadius: 16,
     overflow: "hidden",
-    marginBottom: 12,
+    marginBottom: 10,
   },
   closeResultsButton: {
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    borderRadius: 15,
-    paddingVertical: 16,
-    borderWidth: 2,
-    borderColor: "rgba(255, 255, 255, 0.3)",
+    backgroundColor: "#FFFFFF",
+    borderRadius: 16,
+    paddingVertical: 15,
+    borderWidth: 1.5,
+    borderColor: "rgba(0, 0, 0, 0.1)",
     alignItems: "center",
   },
   closeResultsButtonText: {
-    color: "#E0E1DD",
+    color: "#8B7355",
     fontSize: 16,
-    fontWeight: "bold",
+    fontWeight: "700",
   },
 });

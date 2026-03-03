@@ -12,38 +12,40 @@ import { LinearGradient } from "expo-linear-gradient";
 
 export default function BiologyScreen({ navigation }) {
   const biologyTopics = [
+    { title: "Neuron Structure", modelId: "neuron", hasModel: true },
+    { title: "Animal Cell Structure", modelId: "animalCell", hasModel: true },
+    { title: "Human Brain Structure", modelId: "humanBrain", hasModel: true },
+    { title: "Heart and Lungs", modelId: "heartLungs", hasModel: true },
+    { title: "Digestive System", modelId: "digestiveSystem", hasModel: true },
     {
       title: "Cell Model - Basic Structure",
       modelId: "cellModel",
       hasModel: true,
     },
     { title: "Plant Cell Structure", modelId: "plantCell", hasModel: true },
-    { title: "Animal Cell Structure", modelId: "animalCell", hasModel: true },
     { title: "Human Cell", modelId: "humanCell", hasModel: true },
     { title: "Prokaryotic Cell", modelId: "prokaryoteCell", hasModel: true },
-    { title: "Neuron Structure", modelId: "neuron", hasModel: true },
     { title: "DNA & RNA Structure", modelId: "dnaRna", hasModel: true },
     { title: "Human Heart", modelId: "humanHeart", hasModel: true },
-    { title: "Human Brain Structure", modelId: "humanBrain", hasModel: true },
     { title: "Human Eye Structure", modelId: "humanEye", hasModel: true },
     { title: "Human Skull", modelId: "humanSkull", hasModel: true },
     { title: "Human Skeleton", modelId: "skeleton", hasModel: true },
-    { title: "Digestive System", modelId: "digestiveSystem", hasModel: true },
     { title: "Excretory System", modelId: "excretorySystem", hasModel: true },
-    { title: "Heart and Lungs", modelId: "heartLungs", hasModel: true },
     { title: "Coronavirus (COVID-19)", modelId: "coronavirus", hasModel: true },
     {
       title: "Female Muscular System",
       modelId: "femaleMuscular",
       hasModel: true,
     },
-    { title: "Cervical Vertebra", modelId: "cervicalVertebra", hasModel: true },
+    {
+      title: "Cervical Vertebra",
+      modelId: "cervicalVertebra",
+      hasModel: true,
+    },
     { title: "Python Skull", modelId: "pythonSkull", hasModel: true },
   ];
 
-  const handleBackToHome = () => {
-    navigation.navigate("Home");
-  };
+  const handleBackToHome = () => navigation.navigate("Home");
 
   const handleTopicPress = (topic) => {
     if (topic.hasModel) {
@@ -53,13 +55,12 @@ export default function BiologyScreen({ navigation }) {
 
   return (
     <LinearGradient
-      colors={["#0D1322", "#08101C", "#031525"]}
+      colors={["#FCE4EC", "#FFF3E0", "#FFF8E1"]}
       style={styles.container}
     >
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar style="light" />
+        <StatusBar style="dark" />
 
-        {/* Back Button */}
         <TouchableOpacity
           style={styles.backButton}
           onPress={handleBackToHome}
@@ -79,7 +80,7 @@ export default function BiologyScreen({ navigation }) {
             </View>
             <Text style={styles.title}>Biology</Text>
             <Text style={styles.subtitle}>
-              Explore the fascinating world of life
+              Discover the secrets of life!
             </Text>
           </View>
 
@@ -88,35 +89,26 @@ export default function BiologyScreen({ navigation }) {
               <TouchableOpacity
                 key={index}
                 style={styles.topicCardWrapper}
-                activeOpacity={0.8}
+                activeOpacity={0.85}
                 onPress={() => handleTopicPress(topic)}
               >
-                <LinearGradient
-                  colors={["rgba(255, 107, 107, 0.15)", "rgba(255, 107, 107, 0.05)"]}
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 1 }}
-                  style={styles.topicCard}
-                >
-                  <View style={styles.topicInfo}>
-                    <View style={styles.topicNumber}>
-                      <Text style={styles.topicNumberText}>{index + 1}</Text>
-                    </View>
-                    <View style={styles.topicContent}>
-                      <Text style={styles.topicTitle}>{topic.title}</Text>
-                      <Text style={styles.topicSubtitle}>
-                        3D biological models
-                      </Text>
-                    </View>
-                  </View>
+                <View style={styles.topicCard}>
                   <LinearGradient
-                    colors={["#FF6B6B", "#FF9B6B"]}
-                    start={{ x: 0, y: 0.5 }}
-                    end={{ x: 1, y: 0.5 }}
-                    style={styles.exploreButton}
+                    colors={["#F857A6", "#FF5858"]}
+                    style={styles.topicNumber}
                   >
-                    <Text style={styles.exploreButtonText}>Explore</Text>
+                    <Text style={styles.topicNumberText}>{index + 1}</Text>
                   </LinearGradient>
-                </LinearGradient>
+                  <View style={styles.topicContent}>
+                    <Text style={styles.topicTitle}>{topic.title}</Text>
+                    <Text style={styles.topicSubtitle}>
+                      Tap to see 3D model ✨
+                    </Text>
+                  </View>
+                  <View style={styles.goButton}>
+                    <Text style={styles.goButtonText}>→</Text>
+                  </View>
+                </View>
               </TouchableOpacity>
             ))}
           </View>
@@ -132,20 +124,18 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: "absolute",
-    top: 60,
+    top: 58,
     left: 20,
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "rgba(0, 0, 0, 0.06)",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 10,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.2)",
   },
   backButtonText: {
-    color: "#E0E1DD",
+    color: "#AD1457",
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -154,101 +144,99 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingHorizontal: 20,
-    paddingTop: 100,
+    paddingTop: 105,
     paddingBottom: 40,
   },
   headerSection: {
     alignItems: "center",
-    marginBottom: 40,
+    marginBottom: 28,
   },
   iconContainer: {
     width: 80,
     height: 80,
-    backgroundColor: "rgba(255, 107, 107, 0.2)",
-    borderRadius: 40,
+    backgroundColor: "rgba(248, 87, 166, 0.12)",
+    borderRadius: 26,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 16,
+    marginBottom: 14,
     borderWidth: 2,
-    borderColor: "#FF6B6B",
+    borderColor: "rgba(248, 87, 166, 0.25)",
   },
   iconText: {
     fontSize: 40,
   },
   title: {
     fontSize: 32,
-    fontWeight: "800",
-    color: "#E0E1DD",
+    fontWeight: "900",
+    color: "#880E4F",
     textAlign: "center",
-    letterSpacing: 1.2,
-    marginBottom: 8,
+    marginBottom: 6,
   },
   subtitle: {
     fontSize: 16,
-    color: "#99D98C",
+    color: "#E91E63",
     textAlign: "center",
     fontWeight: "600",
   },
   topicsSection: {
+    gap: 12,
     marginBottom: 30,
   },
   topicCardWrapper: {
-    marginVertical: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 12 },
-    shadowOpacity: 0.5,
-    shadowRadius: 16,
-    elevation: 20,
+    shadowColor: "#F857A6",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 4,
   },
   topicCard: {
-    borderRadius: 16,
-    padding: 20,
+    borderRadius: 18,
+    padding: 16,
+    backgroundColor: "#FFFFFF",
+    flexDirection: "row",
+    alignItems: "center",
     borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.1)",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  topicInfo: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
+    borderColor: "rgba(248, 87, 166, 0.12)",
   },
   topicNumber: {
-    width: 32,
-    height: 32,
-    backgroundColor: "#FF6B6B",
-    borderRadius: 16,
+    width: 36,
+    height: 36,
+    borderRadius: 12,
     justifyContent: "center",
     alignItems: "center",
-    marginRight: 15,
+    marginRight: 14,
   },
   topicNumberText: {
     color: "#FFFFFF",
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: "800",
   },
   topicContent: {
     flex: 1,
   },
   topicTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-    color: "#E0E1DD",
-    marginBottom: 4,
+    fontSize: 15,
+    fontWeight: "700",
+    color: "#880E4F",
+    marginBottom: 3,
   },
   topicSubtitle: {
     fontSize: 12,
-    color: "#C5C7C9",
+    color: "#F06292",
+    fontWeight: "500",
   },
-  exploreButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 20,
+  goButton: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: "rgba(248, 87, 166, 0.1)",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 8,
   },
-  exploreButtonText: {
-    color: "#FFFFFF",
-    fontSize: 14,
+  goButtonText: {
+    fontSize: 16,
     fontWeight: "bold",
+    color: "#F857A6",
   },
 });

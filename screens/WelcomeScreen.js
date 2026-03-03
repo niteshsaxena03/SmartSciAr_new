@@ -46,11 +46,11 @@ export default function WelcomeScreen({ navigation }) {
 
   return (
     <LinearGradient
-      colors={["#0D1B2A", "#1B263B", "#415A77"]}
+      colors={["#FFF8E7", "#FFF0D4", "#FFE8C8"]}
       style={styles.container}
     >
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar style="light" />
+        <StatusBar barStyle="dark-content" />
 
         {/* Header Section */}
         <Animated.View
@@ -88,7 +88,7 @@ export default function WelcomeScreen({ navigation }) {
             activeOpacity={0.8}
           >
             <LinearGradient
-              colors={["#4895EF", "#4361EE"]}
+              colors={["#FF9A56", "#FF6B6B"]}
               style={styles.buttonGradient}
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 1 }}
@@ -104,7 +104,7 @@ export default function WelcomeScreen({ navigation }) {
             activeOpacity={0.8}
           >
             <LinearGradient
-              colors={["#1FCFA6", "#19A485"]}
+              colors={["#667EEA", "#764BA2"]}
               style={styles.buttonGradient}
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 1 }}
@@ -148,28 +148,28 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 48,
     fontWeight: "800",
-    color: "#E0E1DD",
+    color: "#2D2015",
     textAlign: "center",
     letterSpacing: 1,
   },
   subtitle: {
     fontSize: 20,
-    color: "#99D98C",
+    color: "#FF9A56",
     textAlign: "center",
     fontWeight: "600",
     marginBottom: 20,
   },
   gradeContainer: {
-    backgroundColor: "rgba(153, 217, 140, 0.1)",
+    backgroundColor: "rgba(255,154,86,0.1)",
     paddingHorizontal: 25,
     paddingVertical: 12,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: "#99D98C",
+    borderColor: "#FF9A56",
     marginTop: 10,
   },
   gradeText: {
-    color: "#99D98C",
+    color: "#FF9A56",
     fontSize: 14,
     textAlign: "center",
     fontWeight: "500",
@@ -183,14 +183,14 @@ const styles = StyleSheet.create({
   welcomeText: {
     fontSize: 26,
     fontWeight: "bold",
-    color: "#E0E1DD",
+    color: "#2D2015",
     textAlign: "center",
     marginBottom: 16,
     lineHeight: 32,
   },
   descriptionText: {
     fontSize: 16,
-    color: "#C5C7C9",
+    color: "#8B7355",
     textAlign: "center",
     lineHeight: 24,
     fontWeight: "400",
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
     height: 56,
     borderRadius: 28,
     overflow: "hidden",
-    shadowColor: "#4895EF",
+    shadowColor: "#FF9A56",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.5,
     shadowRadius: 8,
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
     height: 56,
     borderRadius: 28,
     overflow: "hidden",
-    shadowColor: "#1FCFA6",
+    shadowColor: "#667EEA",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.5,
     shadowRadius: 8,
@@ -246,10 +246,10 @@ const styles = StyleSheet.create({
   dividerLine: {
     flex: 1,
     height: 1,
-    backgroundColor: "rgba(224, 225, 221, 0.3)",
+    backgroundColor: "rgba(0,0,0,0.1)",
   },
   dividerText: {
-    color: "#C5C7C9",
+    color: "#8B7355",
     fontSize: 14,
     fontWeight: "600",
     marginHorizontal: 15,
@@ -258,14 +258,14 @@ const styles = StyleSheet.create({
     width: width * 0.85,
     height: 56,
     borderRadius: 28,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "rgba(0,0,0,0.04)",
     borderWidth: 2,
-    borderColor: "rgba(224, 225, 221, 0.3)",
+    borderColor: "rgba(0,0,0,0.1)",
     justifyContent: "center",
     alignItems: "center",
   },
   guestButtonText: {
-    color: "#E0E1DD",
+    color: "#5A4E3C",
     fontSize: 18,
     fontWeight: "bold",
     letterSpacing: 0.8,

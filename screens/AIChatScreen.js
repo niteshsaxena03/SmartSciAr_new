@@ -23,20 +23,20 @@ const THEMES = {
   physics: {
     accentGradient: ["#4895EF", "#4CC9F0"], // Bright Blue/Cyan
     inactiveGradient: ["rgba(72, 149, 239, 0.3)", "rgba(76, 201, 240, 0.3)"],
-    secondaryText: "#4CC9F0",
+    secondaryText: "#1E6B9E",
   },
   chemistry: {
     accentGradient: ["#4ECDC4", "#8DECB4"], // Green/Cyan
     inactiveGradient: ["rgba(78, 205, 196, 0.3)", "rgba(141, 236, 180, 0.3)"],
-    secondaryText: "#4ECDC4",
+    secondaryText: "#1A7A6F",
   },
   biology: {
     accentGradient: ["#FF6B6B", "#FF9B6B"], // Vibrant Red/Pink
     inactiveGradient: ["rgba(255, 107, 107, 0.3)", "rgba(255, 155, 107, 0.3)"],
-    secondaryText: "#FF6B6B",
+    secondaryText: "#B52A2A",
   },
 };
-const BG_GRADIENT = ["#0D1322", "#08101C", "#031525"]; // Deep Dark Background
+const BG_GRADIENT = ["#FFF8E7", "#FFF0D4", "#F5F0E8"];
 
 const AIChatScreen = ({ route, navigation }) => {
   // NOTE: This logic assumes 'topicTitle' will contain a keyword (Physics, Chemistry, Biology)
@@ -200,14 +200,14 @@ const AIChatScreen = ({ route, navigation }) => {
   return (
     <LinearGradient colors={BG_GRADIENT} style={styles.container}>
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="dark-content" />
 
         {/* Header */}
         <Animated.View
           style={[
             styles.header,
             {
-              borderBottomColor: currentTheme.inactiveGradient[1],
+              borderBottomColor: "rgba(0,0,0,0.08)",
               opacity: fadeAnim,
               transform: [{ translateY: slideAnim }, { scale: scaleAnim }],
             },
@@ -215,14 +215,11 @@ const AIChatScreen = ({ route, navigation }) => {
         >
           {/* Back Button */}
           <TouchableOpacity
-            style={[
-              styles.backButton,
-              { borderColor: currentTheme.secondaryText },
-            ]}
+            style={styles.backButton}
             onPress={handleBack}
             activeOpacity={0.7}
           >
-            <Text style={[styles.backButtonText, { color: currentTheme.secondaryText }]}>←</Text>
+            <Text style={[styles.backButtonText, { color: "#5A4E3C" }]}>←</Text>
           </TouchableOpacity>
           
           {/* Header Content */}
@@ -258,7 +255,7 @@ const AIChatScreen = ({ route, navigation }) => {
               <Animated.View style={[styles.loadingContainer, { opacity: fadeAnim }]}>
                 <View style={styles.loadingBubble}>
                   <ActivityIndicator size="small" color={currentTheme.secondaryText} />
-                  <Text style={[styles.loadingText, { color: currentTheme.secondaryText }]}>AI is thinking...</Text>
+                  <Text style={styles.loadingText}>AI is thinking...</Text>
                 </View>
               </Animated.View>
             )}
@@ -269,7 +266,7 @@ const AIChatScreen = ({ route, navigation }) => {
             style={[
               styles.inputContainer,
               {
-                borderTopColor: currentTheme.inactiveGradient[1],
+                borderTopColor: "rgba(0,0,0,0.06)",
                 opacity: fadeAnim,
                 transform: [{ translateY: slideAnim }],
               },
@@ -281,7 +278,7 @@ const AIChatScreen = ({ route, navigation }) => {
                 value={inputText}
                 onChangeText={setInputText}
                 placeholder={`Ask about ${topicTitle}...`}
-                placeholderTextColor="#666"
+                placeholderTextColor="#B8A090"
                 multiline
                 maxLength={500}
                 onSubmitEditing={handleSendMessage}
@@ -320,22 +317,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15,
     borderBottomWidth: 1,
-    borderBottomColor: "#1a2332",
-    backgroundColor: "rgba(10, 14, 26, 0.8)", // Semi-transparent header background
+    borderBottomColor: "rgba(0,0,0,0.08)",
+    backgroundColor: "rgba(255,255,255,0.85)",
   },
   backButton: {
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "rgba(0,0,0,0.06)",
     justifyContent: "center",
     alignItems: "center",
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.2)",
   },
   backButtonText: {
     top : -4,
-    color: "#ffffff",
+    color: "#5A4E3C",
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -346,7 +341,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#ffffff",
+    color: "#2D2015",
   },
   headerSubtitle: {
     fontSize: 12,
@@ -391,22 +386,22 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     paddingVertical: 12,
     borderRadius: 20,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 8,
-    elevation: 8,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    elevation: 2,
   },
   aiMessageBubble: {
-    backgroundColor: "rgba(25, 178, 255, 1)",
+    backgroundColor: "#FFFFFF",
     borderBottomLeftRadius: 5,
-    borderColor: "rgba(255, 255, 255, 0.1)",
+    borderColor: "rgba(0,0,0,0.08)",
     borderWidth: 1,
-    shadowColor: "#4ecdc4", // Placeholder, will be overridden by component logic/theme
+    shadowColor: "#000",
   },
   userMessageBubble: {
-    backgroundColor: "#E0E1DD",
+    backgroundColor: "#FF9A56",
     borderBottomRightRadius: 5,
-    shadowColor: "#4ecdc4", // Placeholder, will be overridden by component logic/theme
+    shadowColor: "#000",
   },
   errorMessageBubble: {
     backgroundColor: "#ff6b6b",
@@ -417,10 +412,10 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   aiMessageText: {
-    color: "#ffffff",
+    color: "#2D2015",
   },
   userMessageText: {
-    color: "#1a2332",
+    color: "#FFFFFF",
     fontWeight: "600",
   },
   errorMessageText: {
@@ -432,10 +427,10 @@ const styles = StyleSheet.create({
     opacity: 0.7,
   },
   aiTimestamp: {
-    color: "#C5C7C9",
+    color: "#8B7355",
   },
   userTimestamp: {
-    color: "#1a2332",
+    color: "rgba(255,255,255,0.8)",
   },
   loadingContainer: {
     alignItems: "flex-start",
@@ -444,7 +439,7 @@ const styles = StyleSheet.create({
   loadingBubble: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "rgba(255, 255, 255, 0.08)",
+    backgroundColor: "rgba(0,0,0,0.04)",
     paddingHorizontal: 18,
     paddingVertical: 12,
     borderRadius: 20,
@@ -453,28 +448,33 @@ const styles = StyleSheet.create({
   loadingText: {
     marginLeft: 10,
     fontSize: 14,
+    color: "#8B7355",
   },
   inputContainer: {
     paddingHorizontal: 15,
     paddingVertical: 10,
-    backgroundColor: "rgba(10, 14, 26, 0.8)", // Semi-transparent input background
+    backgroundColor: "rgba(255,255,255,0.85)",
+    borderTopWidth: 1,
+    borderTopColor: "rgba(0,0,0,0.06)",
   },
   inputWrapper: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#1a2332",
+    backgroundColor: "#FFFFFF",
     borderRadius: 30,
     paddingHorizontal: 15,
     paddingVertical: 5,
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 10,
-    elevation: 10,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 6,
+    elevation: 2,
+    borderWidth: 1,
+    borderColor: "rgba(0,0,0,0.08)",
   },
   textInput: {
     flex: 1,
-    color: "#ffffff",
+    color: "#2D2015",
     fontSize: 16,
     maxHeight: 120,
     paddingVertical: 10,
@@ -498,7 +498,7 @@ const styles = StyleSheet.create({
   sendButtonText: {
     top : -2,
     fontSize: 25,
-    color: "#0a0e1a",
+    color: "#FFFFFF",
     fontWeight: "bold",
   },
 });

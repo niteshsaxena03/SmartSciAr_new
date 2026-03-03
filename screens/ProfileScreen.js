@@ -111,11 +111,11 @@ export default function ProfileScreen({ navigation }) {
   if (loading && !userProfile) {
     return (
       <LinearGradient
-        colors={["#0D1322", "#0A1B36", "#042D45"]}
+        colors={["#FFF8E7", "#FFF0D4", "#F5F0E8"]}
         style={styles.container}
       >
         <SafeAreaView style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#4895EF" />
+          <ActivityIndicator size="large" color="#FF9A56" />
           <Text style={styles.loadingText}>Loading profile...</Text>
         </SafeAreaView>
       </LinearGradient>
@@ -124,11 +124,11 @@ export default function ProfileScreen({ navigation }) {
 
   return (
     <LinearGradient
-      colors={["#0D1322", "#0A1B36", "#042D45"]}
+      colors={["#FFF8E7", "#FFF0D4", "#F5F0E8"]}
       style={styles.container}
     >
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar style="light" />
+        <StatusBar style="dark" />
 
         {/* Back Button */}
         <TouchableOpacity
@@ -147,7 +147,7 @@ export default function ProfileScreen({ navigation }) {
           <View style={styles.headerSection}>
             <View style={styles.avatarContainer}>
               <LinearGradient
-                colors={["#4895EF", "#4CC9F0"]}
+                colors={["#FF9A56", "#FF6B6B"]}
                 style={styles.avatar}
               >
                 <Text style={styles.avatarText}>
@@ -168,7 +168,7 @@ export default function ProfileScreen({ navigation }) {
               <TextInput
                 style={[styles.input, !isEditing && styles.inputDisabled]}
                 placeholder="Enter your full name"
-                placeholderTextColor="rgba(224, 225, 221, 0.5)"
+                placeholderTextColor="#B8A090"
                 value={name}
                 onChangeText={setName}
                 editable={isEditing}
@@ -183,7 +183,7 @@ export default function ProfileScreen({ navigation }) {
               <TextInput
                 style={[styles.input, !isEditing && styles.inputDisabled]}
                 placeholder="Enter your class (6-12)"
-                placeholderTextColor="rgba(224, 225, 221, 0.5)"
+                placeholderTextColor="#B8A090"
                 value={studentClass}
                 onChangeText={setStudentClass}
                 editable={isEditing}
@@ -242,7 +242,7 @@ export default function ProfileScreen({ navigation }) {
                   disabled={isSaving}
                 >
                   <LinearGradient
-                    colors={["#1FCFA6", "#19A485"]}
+                    colors={["#FF9A56", "#FF6B6B"]}
                     style={styles.buttonGradient}
                   >
                     <Text style={styles.buttonText}>
@@ -259,7 +259,7 @@ export default function ProfileScreen({ navigation }) {
                   activeOpacity={0.8}
                 >
                   <LinearGradient
-                    colors={["#4895EF", "#4361EE"]}
+                    colors={["#667EEA", "#764BA2"]}
                     style={styles.buttonGradient}
                   >
                     <Text style={styles.buttonText}>Edit Profile</Text>
@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   loadingText: {
-    color: "#E0E1DD",
+    color: "#8B7355",
     fontSize: 16,
     marginTop: 16,
   },
@@ -303,15 +303,13 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: "rgba(178, 207, 249, 0.9)",
+    backgroundColor: "rgba(0,0,0,0.06)",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 10,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.2)",
   },
   backButtonText: {
-    color: "#E0E1DD",
+    color: "#5A4E3C",
     top: -2,
     fontSize: 24,
     fontWeight: "bold",
@@ -337,8 +335,6 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     justifyContent: "center",
     alignItems: "center",
-    borderWidth: 3,
-    borderColor: "rgba(255, 255, 255, 0.2)",
   },
   avatarText: {
     fontSize: 48,
@@ -348,14 +344,14 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: "800",
-    color: "#E0E1DD",
+    color: "#2D2015",
     textAlign: "center",
     letterSpacing: 1.2,
     marginBottom: 8,
   },
   email: {
     fontSize: 16,
-    color: "#4CC9F0",
+    color: "#FF9A56",
     textAlign: "center",
     fontWeight: "500",
   },
@@ -368,46 +364,46 @@ const styles = StyleSheet.create({
   fieldLabel: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#E0E1DD",
+    color: "#5A4E3C",
     marginBottom: 8,
     marginLeft: 4,
   },
   input: {
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "#FFFFFF",
     borderRadius: 15,
     padding: 16,
     fontSize: 16,
-    color: "#E0E1DD",
+    color: "#2D2015",
     borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.2)",
+    borderColor: "rgba(0,0,0,0.1)",
   },
   inputDisabled: {
-    backgroundColor: "rgba(255, 255, 255, 0.05)",
-    opacity: 0.7,
+    backgroundColor: "#F5F0E8",
+    opacity: 0.8,
   },
   fieldHint: {
     fontSize: 12,
-    color: "rgba(224, 225, 221, 0.6)",
+    color: "#B8A090",
     marginTop: 6,
     marginLeft: 4,
   },
   infoCard: {
-    backgroundColor: "rgba(72, 149, 239, 0.1)",
+    backgroundColor: "#FFFFFF",
     borderRadius: 15,
     padding: 20,
     marginBottom: 30,
     borderWidth: 1,
-    borderColor: "rgba(72, 149, 239, 0.3)",
+    borderColor: "rgba(255,154,86,0.2)",
   },
   infoLabel: {
     fontSize: 14,
-    color: "rgba(224, 225, 221, 0.7)",
+    color: "#8B7355",
     marginBottom: 6,
   },
   infoValue: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#E0E1DD",
+    color: "#2D2015",
   },
   buttonGroup: {
     flexDirection: "row",
@@ -420,15 +416,15 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   cancelButton: {
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    borderWidth: 2,
-    borderColor: "rgba(255, 255, 255, 0.3)",
+    backgroundColor: "#FFFFFF",
+    borderWidth: 1,
+    borderColor: "rgba(0,0,0,0.1)",
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 16,
   },
   cancelButtonText: {
-    color: "#E0E1DD",
+    color: "#5A4E3C",
     fontSize: 16,
     fontWeight: "bold",
   },
@@ -451,11 +447,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   logoutButton: {
-    backgroundColor: "rgba(255, 107, 107, 0.2)",
+    backgroundColor: "rgba(255,107,107,0.08)",
     borderRadius: 15,
     paddingVertical: 16,
-    borderWidth: 2,
-    borderColor: "rgba(255, 107, 107, 0.5)",
+    borderWidth: 1,
+    borderColor: "rgba(255,107,107,0.3)",
     alignItems: "center",
   },
   logoutButtonText: {

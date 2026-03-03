@@ -13,13 +13,13 @@ import { LinearGradient } from "expo-linear-gradient";
 export default function PhysicsScreen({ navigation }) {
   const physicsTopics = [
     {
-      title: "Newton's Cradle",
-      modelId: "decoration",
+      title: "The New Cartesian Sign Convention for Spherical Mirrors",
+      modelId: "figure109",
       hasModel: true,
     },
     {
-      title: "Reflection & Refraction Prism",
-      modelId: "prism",
+      title: "Focal Ray Refraction in Lenses",
+      modelId: "figure1014",
       hasModel: true,
     },
     {
@@ -33,8 +33,8 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Concave and Convex Mirror",
-      modelId: "figure102",
+      title: "Image Formation by Convex Lens for Various Object Positions",
+      modelId: "figure1016",
       hasModel: true,
     },
     {
@@ -68,8 +68,8 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "The New Cartesian Sign Convention for Spherical Mirrors",
-      modelId: "figure109",
+      title: "Newton's Cradle",
+      modelId: "decoration",
       hasModel: true,
     },
     {
@@ -88,8 +88,8 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Focal Ray Refraction in Lenses",
-      modelId: "figure1014",
+      title: "Reflection & Refraction Prism",
+      modelId: "prism",
       hasModel: true,
     },
     {
@@ -98,8 +98,8 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Image Formation by Convex Lens for Various Object Positions",
-      modelId: "figure1016",
+      title: "Concave and Convex Mirror",
+      modelId: "figure102",
       hasModel: true,
     },
     {
@@ -154,9 +154,7 @@ export default function PhysicsScreen({ navigation }) {
     },
   ];
 
-  const handleBackToHome = () => {
-    navigation.navigate("Home");
-  };
+  const handleBackToHome = () => navigation.navigate("Home");
 
   const handleTopicPress = (topic) => {
     if (topic.hasModel && topic.modelId) {
@@ -166,13 +164,12 @@ export default function PhysicsScreen({ navigation }) {
 
   return (
     <LinearGradient
-      colors={["#0D1322", "#08101C", "#031525"]}
+      colors={["#EDE7F6", "#E8EAF6", "#E3F2FD"]}
       style={styles.container}
     >
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar style="light" />
+        <StatusBar style="dark" />
 
-        {/* Back Button */}
         <TouchableOpacity
           style={styles.backButton}
           onPress={handleBackToHome}
@@ -188,11 +185,11 @@ export default function PhysicsScreen({ navigation }) {
         >
           <View style={styles.headerSection}>
             <View style={styles.iconContainer}>
-              <Text style={styles.iconText}>⚛️</Text>
+              <Text style={styles.iconText}>🚀</Text>
             </View>
-            <Text style={styles.title}>PHYSICS</Text>
+            <Text style={styles.title}>Physics</Text>
             <Text style={styles.subtitle}>
-              Dive into the fundamental laws of the universe
+              Explore how the universe works!
             </Text>
           </View>
 
@@ -201,35 +198,26 @@ export default function PhysicsScreen({ navigation }) {
               <TouchableOpacity
                 key={index}
                 style={styles.topicCardWrapper}
-                activeOpacity={0.8}
+                activeOpacity={0.85}
                 onPress={() => handleTopicPress(topic)}
               >
-                <LinearGradient
-                  colors={["rgba(68, 123, 222, 0.15)", "rgba(68, 123, 222, 0.05)"]}
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 1 }}
-                  style={styles.topicCard}
-                >
-                  <View style={styles.topicInfo}>
-                    <View style={styles.topicNumber}>
-                      <Text style={styles.topicNumberText}>{index + 1}</Text>
-                    </View>
-                    <View style={styles.topicContent}>
-                      <Text style={styles.topicTitle}>{topic.title}</Text>
-                      <Text style={styles.topicSubtitle}>
-                        3D model available • Tap to explore
-                      </Text>
-                    </View>
-                  </View>
+                <View style={styles.topicCard}>
                   <LinearGradient
-                    colors={["#4895EF", "#4CC9F0"]}
-                    start={{ x: 0, y: 0.5 }}
-                    end={{ x: 1, y: 0.5 }}
-                    style={styles.exploreButton}
+                    colors={["#667EEA", "#764BA2"]}
+                    style={styles.topicNumber}
                   >
-                    <Text style={styles.exploreButtonText}>Explore</Text>
+                    <Text style={styles.topicNumberText}>{index + 1}</Text>
                   </LinearGradient>
-                </LinearGradient>
+                  <View style={styles.topicContent}>
+                    <Text style={styles.topicTitle}>{topic.title}</Text>
+                    <Text style={styles.topicSubtitle}>
+                      Tap to see 3D model ✨
+                    </Text>
+                  </View>
+                  <View style={styles.goButton}>
+                    <Text style={styles.goButtonText}>→</Text>
+                  </View>
+                </View>
               </TouchableOpacity>
             ))}
           </View>
@@ -245,20 +233,18 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: "absolute",
-    top: 60,
+    top: 58,
     left: 20,
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "rgba(0, 0, 0, 0.06)",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 10,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.2)",
   },
   backButtonText: {
-    color: "#E0E1DD",
+    color: "#4A3D6B",
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -267,101 +253,99 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingHorizontal: 20,
-    paddingTop: 100,
+    paddingTop: 105,
     paddingBottom: 40,
   },
   headerSection: {
     alignItems: "center",
-    marginBottom: 40,
+    marginBottom: 28,
   },
   iconContainer: {
     width: 80,
     height: 80,
-    backgroundColor: "rgba(68, 123, 222, 0.2)",
-    borderRadius: 40,
+    backgroundColor: "rgba(102, 126, 234, 0.15)",
+    borderRadius: 26,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 16,
+    marginBottom: 14,
     borderWidth: 2,
-    borderColor: "#4895EF",
+    borderColor: "rgba(102, 126, 234, 0.3)",
   },
   iconText: {
     fontSize: 40,
   },
   title: {
     fontSize: 32,
-    fontWeight: "800",
-    color: "#E0E1DD",
+    fontWeight: "900",
+    color: "#3D2C6B",
     textAlign: "center",
-    letterSpacing: 1.2,
-    marginBottom: 8,
+    marginBottom: 6,
   },
   subtitle: {
     fontSize: 16,
-    color: "#a6e4ffff",
+    color: "#7C6BA5",
     textAlign: "center",
     fontWeight: "600",
   },
   topicsSection: {
+    gap: 12,
     marginBottom: 30,
   },
   topicCardWrapper: {
-    marginVertical: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 12 },
-    shadowOpacity: 0.5,
-    shadowRadius: 16,
-    elevation: 20,
+    shadowColor: "#667EEA",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 4,
   },
   topicCard: {
-    borderRadius: 16,
-    padding: 20,
+    borderRadius: 18,
+    padding: 16,
+    backgroundColor: "#FFFFFF",
+    flexDirection: "row",
+    alignItems: "center",
     borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.1)",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  topicInfo: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
+    borderColor: "rgba(102, 126, 234, 0.12)",
   },
   topicNumber: {
-    width: 32,
-    height: 32,
-    backgroundColor: "#4895EF",
-    borderRadius: 16,
+    width: 36,
+    height: 36,
+    borderRadius: 12,
     justifyContent: "center",
     alignItems: "center",
-    marginRight: 15,
+    marginRight: 14,
   },
   topicNumberText: {
     color: "#FFFFFF",
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: "800",
   },
   topicContent: {
     flex: 1,
   },
   topicTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-    color: "#E0E1DD",
-    marginBottom: 4,
+    fontSize: 15,
+    fontWeight: "700",
+    color: "#2D2051",
+    marginBottom: 3,
   },
   topicSubtitle: {
     fontSize: 12,
-    color: "#C5C7C9",
+    color: "#9B8FC2",
+    fontWeight: "500",
   },
-  exploreButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 20,
+  goButton: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: "rgba(102, 126, 234, 0.1)",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 8,
   },
-  exploreButtonText: {
-    color: "#FFFFFF",
-    fontSize: 14,
+  goButtonText: {
+    fontSize: 16,
     fontWeight: "bold",
+    color: "#667EEA",
   },
 });

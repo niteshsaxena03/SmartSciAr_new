@@ -13,6 +13,11 @@ import { LinearGradient } from "expo-linear-gradient";
 export default function ChemistryScreen({ navigation }) {
   const chemistryTopics = [
     {
+      title: "Water Ball-and-Stick Model",
+      modelId: "waterBallStick",
+      hasModel: true,
+    },
+    {
       title: "Atomic Structure & Periodic Table",
       modelId: "atom",
       hasModel: true,
@@ -23,33 +28,28 @@ export default function ChemistryScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Periodic Table of Elements",
-      modelId: "periodicTable",
+      title: "F Orbital - Quantum Chemistry",
+      modelId: "orbitalF",
       hasModel: true,
     },
     {
-      title: "Water Molecule (H₂O)",
-      modelId: "water",
+      title: "Dxz Orbital - Transition Metals",
+      modelId: "orbitalDxz",
       hasModel: true,
     },
     {
-      title: "Water Ball-and-Stick Model",
-      modelId: "waterBallStick",
-      hasModel: true,
-    },
-    {
-      title: "Liquid Water Structure",
-      modelId: "liquidWater",
-      hasModel: true,
-    },
-    {
-      title: "Benzene - Aromatic Compounds",
-      modelId: "benzene",
+      title: "Cyclohexane Chair Conformation",
+      modelId: "cyclohexane",
       hasModel: true,
     },
     {
       title: "Molecular Structure & Bonding",
       modelId: "molecule",
+      hasModel: true,
+    },
+    {
+      title: "Periodic Table of Elements",
+      modelId: "periodicTable",
       hasModel: true,
     },
     {
@@ -78,18 +78,13 @@ export default function ChemistryScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "F Orbital - Quantum Chemistry",
-      modelId: "orbitalF",
+      title: "Water Molecule (H₂O)",
+      modelId: "water",
       hasModel: true,
     },
     {
-      title: "Dxz Orbital - Transition Metals",
-      modelId: "orbitalDxz",
-      hasModel: true,
-    },
-    {
-      title: "Cyclohexane Chair Conformation",
-      modelId: "cyclohexane",
+      title: "Benzene - Aromatic Compounds",
+      modelId: "benzene",
       hasModel: true,
     },
     {
@@ -103,6 +98,11 @@ export default function ChemistryScreen({ navigation }) {
       hasModel: true,
     },
     {
+      title: "Liquid Water Structure",
+      modelId: "liquidWater",
+      hasModel: true,
+    },
+    {
       title: "Sodium Chloride (NaCl)",
       modelId: "nacl",
       hasModel: true,
@@ -112,9 +112,7 @@ export default function ChemistryScreen({ navigation }) {
     { title: "Electrochemistry", modelId: null, hasModel: false },
   ];
 
-  const handleBackToHome = () => {
-    navigation.navigate("Home");
-  };
+  const handleBackToHome = () => navigation.navigate("Home");
 
   const handleTopicPress = (topic) => {
     if (topic.hasModel && topic.modelId) {
@@ -124,13 +122,12 @@ export default function ChemistryScreen({ navigation }) {
 
   return (
     <LinearGradient
-      colors={["#0D1322", "#08101C", "#031525"]}
+      colors={["#E8F5E9", "#F1F8E9", "#F9FBE7"]}
       style={styles.container}
     >
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar style="light" />
+        <StatusBar style="dark" />
 
-        {/* Back Button */}
         <TouchableOpacity
           style={styles.backButton}
           onPress={handleBackToHome}
@@ -150,7 +147,7 @@ export default function ChemistryScreen({ navigation }) {
             </View>
             <Text style={styles.title}>Chemistry</Text>
             <Text style={styles.subtitle}>
-              Discover the world of molecules and reactions
+              Mix, match & discover molecules!
             </Text>
           </View>
 
@@ -159,37 +156,51 @@ export default function ChemistryScreen({ navigation }) {
               <TouchableOpacity
                 key={index}
                 style={styles.topicCardWrapper}
-                activeOpacity={0.8}
+                activeOpacity={topic.hasModel ? 0.85 : 1}
                 onPress={() => handleTopicPress(topic)}
               >
-                <LinearGradient
-                  colors={topic.hasModel ? ["rgba(100, 255, 218, 0.15)", "rgba(100, 255, 218, 0.05)"] : ["rgba(255, 255, 255, 0.05)", "rgba(255, 255, 255, 0.02)"]}
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 1 }}
-                  style={[styles.topicCard, !topic.hasModel && styles.topicCardDisabled]}
+                <View
+                  style={[
+                    styles.topicCard,
+                    !topic.hasModel && styles.topicCardDisabled,
+                  ]}
                 >
-                  <View style={styles.topicInfo}>
-                    <View style={[styles.topicNumber, topic.hasModel ? styles.topicNumberActive : null]}>
-                      <Text style={styles.topicNumberText}>{index + 1}</Text>
-                    </View>
-                    <View style={styles.topicContent}>
-                      <Text style={[styles.topicTitle, !topic.hasModel && styles.topicTitleDisabled]}>{topic.title}</Text>
-                      <Text style={[styles.topicSubtitle, !topic.hasModel && styles.topicSubtitleDisabled]}>
-                        {topic.hasModel ? "3D model available • Tap to explore" : "Coming soon..."}
-                      </Text>
-                    </View>
+                  <LinearGradient
+                    colors={
+                      topic.hasModel
+                        ? ["#11998E", "#38EF7D"]
+                        : ["#BDBDBD", "#9E9E9E"]
+                    }
+                    style={styles.topicNumber}
+                  >
+                    <Text style={styles.topicNumberText}>{index + 1}</Text>
+                  </LinearGradient>
+                  <View style={styles.topicContent}>
+                    <Text
+                      style={[
+                        styles.topicTitle,
+                        !topic.hasModel && styles.topicTitleDisabled,
+                      ]}
+                    >
+                      {topic.title}
+                    </Text>
+                    <Text
+                      style={[
+                        styles.topicSubtitle,
+                        !topic.hasModel && styles.topicSubtitleDisabled,
+                      ]}
+                    >
+                      {topic.hasModel
+                        ? "Tap to see 3D model ✨"
+                        : "Coming soon..."}
+                    </Text>
                   </View>
                   {topic.hasModel && (
-                    <LinearGradient
-                      colors={["#4ECDC4", "#8DECB4"]}
-                      start={{ x: 0, y: 0.5 }}
-                      end={{ x: 1, y: 0.5 }}
-                      style={styles.exploreButton}
-                    >
-                      <Text style={styles.exploreButtonText}>Explore</Text>
-                    </LinearGradient>
+                    <View style={styles.goButton}>
+                      <Text style={styles.goButtonText}>→</Text>
+                    </View>
                   )}
-                </LinearGradient>
+                </View>
               </TouchableOpacity>
             ))}
           </View>
@@ -205,20 +216,18 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: "absolute",
-    top: 60,
+    top: 58,
     left: 20,
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "rgba(0, 0, 0, 0.06)",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 10,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.2)",
   },
   backButtonText: {
-    color: "#E0E1DD",
+    color: "#2E7D32",
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -227,115 +236,109 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingHorizontal: 20,
-    paddingTop: 100,
+    paddingTop: 105,
     paddingBottom: 40,
   },
   headerSection: {
     alignItems: "center",
-    marginBottom: 40,
+    marginBottom: 28,
   },
   iconContainer: {
     width: 80,
     height: 80,
-    backgroundColor: "rgba(78, 205, 196, 0.2)",
-    borderRadius: 40,
+    backgroundColor: "rgba(17, 153, 142, 0.12)",
+    borderRadius: 26,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 16,
+    marginBottom: 14,
     borderWidth: 2,
-    borderColor: "#4ECDC4",
+    borderColor: "rgba(17, 153, 142, 0.25)",
   },
   iconText: {
     fontSize: 40,
   },
   title: {
     fontSize: 32,
-    fontWeight: "800",
-    color: "#E0E1DD",
+    fontWeight: "900",
+    color: "#1B5E20",
     textAlign: "center",
-    letterSpacing: 1.2,
-    marginBottom: 8,
+    marginBottom: 6,
   },
   subtitle: {
     fontSize: 16,
-    color: "#a6ff94ff",
+    color: "#4CAF50",
     textAlign: "center",
     fontWeight: "600",
   },
   topicsSection: {
+    gap: 12,
     marginBottom: 30,
   },
   topicCardWrapper: {
-    marginVertical: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 12 },
-    shadowOpacity: 0.5,
-    shadowRadius: 16,
-    elevation: 20,
+    shadowColor: "#11998E",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 4,
   },
   topicCard: {
-    borderRadius: 16,
-    padding: 20,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.1)",
+    borderRadius: 18,
+    padding: 16,
+    backgroundColor: "#FFFFFF",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
+    borderWidth: 1,
+    borderColor: "rgba(17, 153, 142, 0.12)",
   },
   topicCardDisabled: {
-    borderColor: "rgba(255, 255, 255, 0.05)",
-    shadowOpacity: 0,
-    elevation: 0,
-  },
-  topicInfo: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
+    backgroundColor: "rgba(255,255,255,0.5)",
+    borderColor: "rgba(0,0,0,0.06)",
   },
   topicNumber: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 36,
+    height: 36,
+    borderRadius: 12,
     justifyContent: "center",
     alignItems: "center",
-    marginRight: 15,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-  },
-  topicNumberActive: {
-    backgroundColor: "#4ECDC4",
+    marginRight: 14,
   },
   topicNumberText: {
     color: "#FFFFFF",
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: "800",
   },
   topicContent: {
     flex: 1,
   },
   topicTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-    color: "#E0E1DD",
-    marginBottom: 4,
+    fontSize: 15,
+    fontWeight: "700",
+    color: "#1B5E20",
+    marginBottom: 3,
   },
   topicTitleDisabled: {
-    color: "#6C757D",
+    color: "#9E9E9E",
   },
   topicSubtitle: {
     fontSize: 12,
-    color: "#C5C7C9",
+    color: "#66BB6A",
+    fontWeight: "500",
   },
   topicSubtitleDisabled: {
-    color: "#6C757D",
+    color: "#BDBDBD",
   },
-  exploreButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 20,
+  goButton: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: "rgba(17, 153, 142, 0.1)",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 8,
   },
-  exploreButtonText: {
-    color: "#FFFFFF",
-    fontSize: 14,
+  goButtonText: {
+    fontSize: 16,
     fontWeight: "bold",
+    color: "#11998E",
   },
 });

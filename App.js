@@ -14,6 +14,7 @@ import ChemistryModelScreen from "./screens/ChemistryModelScreen";
 import BiologyModelScreen from "./screens/BiologyModelScreen";
 import PhysicsModelScreen from "./screens/PhysicsModelScreen";
 import AIChatScreen from "./screens/AIChatScreen";
+import SplashScreen from "./screens/SplashScreen";
 
 const Stack = createStackNavigator();
 
@@ -22,7 +23,7 @@ export default function App() {
     <AuthProvider>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Welcome"
+          initialRouteName="Splash"
           screenOptions={{
             headerShown: false,
             gestureEnabled: true,
@@ -43,6 +44,7 @@ export default function App() {
           }}
         >
           <Stack.Screen name="Welcome" component={WelcomeScreen} />
+          <Stack.Screen name="Splash" component={SplashScreen} />
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Signup" component={SignupScreen} />
